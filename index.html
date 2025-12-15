@@ -1,392 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Priyanka Lakra | Data Analytics Projects</title>
-  <meta name="description" content="Project-focused Data Analyst Portfolio showcasing business-driven analytics case studies.">
-
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-  <!-- Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-
-  <style>
-    :root {
-      --primary: #0f172a;
-      --accent: #2563eb;
-      --bg: #f8fafc;
-      --card: #ffffff;
-      --text: #1e293b;
-      --muted: #64748b;
-      --border: #e2e8f0;
-      --success: #16a34a;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: "Inter", sans-serif;
-    }
-
-    body {
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-    }
-
-    a { text-decoration: none; color: inherit; }
-
-    /* ---------------- NAV ---------------- */
-    nav {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: rgba(255,255,255,0.96);
-      border-bottom: 1px solid var(--border);
-      padding: 16px 6%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .logo {
-      font-weight: 800;
-      letter-spacing: -0.5px;
-      color: var(--primary);
-    }
-
-    .nav-links a {
-      margin-left: 28px;
-      font-size: 0.95rem;
-      color: var(--muted);
-      font-weight: 500;
-    }
-
-    .nav-links a:hover {
-      color: var(--accent);
-    }
-
-    /* ---------------- HERO ---------------- */
-    .hero {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 120px 20px;
-      background: radial-gradient(circle at top, #eff6ff 0%, #ffffff 60%);
-      animation: fadeUp 1s ease;
-    }
-
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    .hero-badge {
-      display: inline-block;
-      margin-bottom: 22px;
-      padding: 6px 16px;
-      font-size: 0.8rem;
-      font-weight: 600;
-      border-radius: 999px;
-      background: #dbeafe;
-      color: var(--accent);
-      border: 1px solid #bfdbfe;
-    }
-
-    .hero h1 {
-      font-size: 3.2rem;
-      font-weight: 800;
-      letter-spacing: -1px;
-      margin-bottom: 16px;
-      color: var(--primary);
-    }
-
-    .hero p {
-      max-width: 760px;
-      margin: auto;
-      font-size: 1.1rem;
-      color: var(--muted);
-      margin-bottom: 36px;
-    }
-
-    .hero-cta {
-      display: flex;
-      justify-content: center;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      padding: 14px 28px;
-      border-radius: 8px;
-      font-weight: 600;
-      font-size: 0.95rem;
-      transition: 0.25s ease;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .btn-primary {
-      background: var(--accent);
-      color: white;
-      box-shadow: 0 10px 20px rgba(37,99,235,0.25);
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-2px);
-      background: #1d4ed8;
-    }
-
-    .btn-outline {
-      border: 1px solid var(--border);
-      background: white;
-      color: var(--text);
-    }
-
-    .btn-outline:hover {
-      border-color: var(--text);
-    }
-
-    /* ---------------- PROJECTS ---------------- */
-    section {
-      max-width: 1200px;
-      margin: auto;
-      padding: 100px 20px;
-    }
-
-    .section-header {
-      text-align: center;
-      margin-bottom: 60px;
-    }
-
-    .section-header h2 {
-      font-size: 2.2rem;
-      margin-bottom: 10px;
-      color: var(--primary);
-    }
-
-    .section-header p {
-      color: var(--muted);
-      font-size: 1.05rem;
-    }
-
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-      gap: 40px;
-    }
-
-    .project-card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      display: flex;
-      flex-direction: column;
-      transition: 0.3s ease;
-    }
-
-    .project-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 20px 35px rgba(0,0,0,0.08);
-    }
-
-    .project-body {
-      padding: 32px;
-      flex: 1;
-    }
-
-    .project-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-bottom: 14px;
-    }
-
-    .tag {
-      font-size: 0.7rem;
-      font-weight: 700;
-      letter-spacing: 0.4px;
-      text-transform: uppercase;
-      color: var(--accent);
-    }
-
-    .project-title {
-      font-size: 1.45rem;
-      font-weight: 700;
-      margin-bottom: 10px;
-    }
-
-    .project-desc {
-      font-size: 1rem;
-      color: var(--muted);
-      margin-bottom: 18px;
-    }
-
-    .project-points {
-      background: #f1f5f9;
-      padding: 16px;
-      border-radius: 10px;
-      font-size: 0.95rem;
-    }
-
-    .project-points li {
-      margin-bottom: 8px;
-      padding-left: 18px;
-      position: relative;
-    }
-
-    .project-points li::before {
-      content: "✓";
-      position: absolute;
-      left: 0;
-      color: var(--success);
-      font-weight: bold;
-    }
-
-    .project-footer {
-      padding: 18px 32px;
-      border-top: 1px solid var(--border);
-      background: #fafafa;
-      display: flex;
-      gap: 20px;
-    }
-
-    .project-link {
-      font-size: 0.9rem;
-      font-weight: 600;
-      color: var(--primary);
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .project-link:hover {
-      color: var(--accent);
-    }
-
-    /* ---------------- FOOTER ---------------- */
-    footer {
-      text-align: center;
-      padding: 50px 20px;
-      font-size: 0.9rem;
-      color: var(--muted);
-    }
-
-    @media (max-width: 768px) {
-      .hero h1 { font-size: 2.4rem; }
-      .nav-links { display: none; }
-    }
-  </style>
+  <meta charset="UTF-8">
+  <title>Priyanka Lakra | Data Analyst</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<!-- NAV -->
-<nav>
-  <div class="logo">PRIYANKA • PROJECTS</div>
-  <div class="nav-links">
-    <a href="#projects">Projects</a>
-    <a href="https://github.com/priyankadatacodes" target="_blank">GitHub</a>
-    <a href="https://www.kaggle.com/priyankalakraxdata" target="_blank">Kaggle</a>
-  </div>
-</nav>
-
 <!-- HERO -->
-<header class="hero">
-  <div>
-    <span class="hero-badge">Open to Data Analyst Roles</span>
-    <h1>Data Analytics Project Portfolio</h1>
-    <p>
-      Business-focused analytics projects that demonstrate
-      <strong>problem solving, insights, and real-world impact</strong>.
-    </p>
-    <div class="hero-cta">
-      <a href="#projects" class="btn btn-primary"><i class="fas fa-layer-group"></i> View Projects</a>
-      <a href="https://github.com/priyankadatacodes" target="_blank" class="btn btn-outline">
-        <i class="fab fa-github"></i> GitHub
-      </a>
-    </div>
-  </div>
-</header>
+<section class="hero">
+  <h1>Priyanka Lakra</h1>
+  <p class="subtitle">Data Analyst | Python • SQL • Power BI</p>
 
-<!-- PROJECTS -->
-<section id="projects">
-  <div class="section-header">
-    <h2>Featured Projects</h2>
-    <p>End-to-end case studies built using Python, SQL, and BI tools.</p>
-  </div>
-
-  <div class="projects-grid">
-
-    <!-- PROJECT 1 -->
-    <div class="project-card">
-      <div class="project-body">
-        <div class="project-tags">
-          <span class="tag">Marketing Analytics</span>
-          <span class="tag">Python</span>
-          <span class="tag">EDA</span>
-        </div>
-        <div class="project-title">Social Media Content Performance Analysis</div>
-        <p class="project-desc">
-          Analyzed engagement data to identify high-performing content formats
-          and platforms for better ROI.
-        </p>
-        <ul class="project-points">
-          <li>Built engagement KPIs and metrics</li>
-          <li>Platform-wise and content-type comparison</li>
-          <li>Actionable recommendations for content strategy</li>
-        </ul>
-      </div>
-      <div class="project-footer">
-        <a class="project-link" href="https://www.kaggle.com/code/priyankalakraxdata/social-media-content-performance-engagement-da" target="_blank">
-          <i class="fas fa-book"></i> Kaggle
-        </a>
-        <a class="project-link" href="https://github.com/priyankadatacodes" target="_blank">
-          <i class="fab fa-github"></i> GitHub
-        </a>
-      </div>
-    </div>
-
-    <!-- PROJECT 2 -->
-    <div class="project-card">
-      <div class="project-body">
-        <div class="project-tags">
-          <span class="tag">Time Series</span>
-          <span class="tag">Forecasting</span>
-          <span class="tag">Energy Analytics</span>
-        </div>
-        <div class="project-title">Global Energy Consumption Forecasting</div>
-        <p class="project-desc">
-          Forecasted global energy demand using historical trends
-          to support planning and sustainability insights.
-        </p>
-        <ul class="project-points">
-          <li>Trend analysis across countries</li>
-          <li>Renewable vs non-renewable comparison</li>
-          <li>Forecast-driven business insights</li>
-        </ul>
-      </div>
-      <div class="project-footer">
-        <a class="project-link" href="https://www.kaggle.com/code/priyankalakraxdata/global-energy-consumption-analysis-forecast/notebook" target="_blank">
-          <i class="fas fa-book"></i> Kaggle
-        </a>
-        <a class="project-link" href="https://github.com/priyankadatacodes" target="_blank">
-          <i class="fab fa-github"></i> GitHub
-        </a>
-      </div>
-    </div>
-
+  <div class="links">
+    <a href="https://github.com/priyankadatacodes" target="_blank">GitHub</a>
+    <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+    <a href="#">Resume</a>
   </div>
 </section>
 
+<!-- ABOUT -->
+<section class="section">
+  <h2>About Me</h2>
+  <p>
+    I am a Data Analyst with hands-on experience in data cleaning,
+    exploratory data analysis, SQL querying, and dashboard creation.
+    I focus on solving real business problems using data.
+  </p>
+</section>
+
+<!-- SKILLS -->
+<section class="section">
+  <h2>Skills</h2>
+  <ul class="skills">
+    <li>Python</li>
+    <li>SQL</li>
+    <li>Excel</li>
+    <li>Power BI</li>
+    <li>Tableau</li>
+    <li>EDA</li>
+    <li>Funnel Analysis</li>
+    <li>Churn Analysis</li>
+    <li>Cohort Analysis</li>
+    <li>MySQL</li>
+  </ul>
+</section>
+
+<!-- PROJECTS -->
+<section class="section">
+  <h2>Projects</h2>
+
+  <div class="project">
+    <h3>Customer Purchase Funnel Analysis</h3>
+    <p><b>Domain:</b> E-Commerce</p>
+    <p>
+      Analyzed customer journey to identify drop-off points and revenue leakage
+      using Python and SQL.
+    </p>
+    <p><b>Key Insight:</b> Checkout stage caused maximum abandonment.</p>
+    <a href="#">GitHub Repo</a> |
+    <a href="#">Kaggle Notebook</a>
+  </div>
+
+  <div class="project">
+    <h3>Customer Churn Analysis</h3>
+    <p><b>Domain:</b> FinTech</p>
+    <p>
+      Identified churn-prone customers using behavioral metrics
+      and historical transaction data.
+    </p>
+    <p><b>Key Insight:</b> Low engagement users had highest churn probability.</p>
+    <a href="#">GitHub Repo</a> |
+    <a href="#">Kaggle Notebook</a>
+  </div>
+
+  <div class="project">
+    <h3>Social Media Engagement Analysis</h3>
+    <p><b>Domain:</b> Social Media</p>
+    <p>
+      Analyzed post-level engagement to identify content strategies
+      that drive higher reach and interaction.
+    </p>
+    <p><b>Key Insight:</b> Carousel posts generated highest engagement.</p>
+    <a href="#">GitHub Repo</a> |
+    <a href="#">Kaggle Notebook</a>
+  </div>
+
+</section>
+
+<!-- FOOTER -->
 <footer>
-  © 2025 Priyanka Lakra • Data Analytics Project Portfolio
+  <p>© 2025 Priyanka Lakra | Data Analyst Portfolio</p>
 </footer>
 
 </body>
