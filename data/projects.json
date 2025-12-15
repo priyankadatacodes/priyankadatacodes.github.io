@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Customer Purchase Funnel Analysis",
+    "domain": "E-Commerce",
+    "tools": "Python, SQL, Power BI",
+    "problem": "Identify where users drop off in purchase journey",
+    "insights": "Checkout stage caused highest revenue leakage",
+    "github": "https://github.com/priyankadatacodes/funnel-analysis",
+    "kaggle": "https://www.kaggle.com/code/yournotebook",
+    "image": "assets/images/funnel.png"
+  },
+  {
+    "title": "Customer Churn Analysis",
+    "domain": "FinTech",
+    "tools": "Python, SQL",
+    "problem": "Predict customers likely to churn",
+    "insights": "High churn observed in low-engagement users",
+    "github": "https://github.com/priyankadatacodes/churn-analysis",
+    "kaggle": "",
+    "image": "assets/images/churn.png"
+  }
+]
