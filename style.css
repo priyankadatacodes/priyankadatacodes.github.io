@@ -17,46 +17,58 @@ body {
 /* =======================
    HERO SECTION
    ======================= */
-.hero-modern {
-  width: 100%;
-  min-height: 100vh;
+.hero {
   background: linear-gradient(135deg, #0f172a, #1e293b);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 24px;
-}
-
-.hero-content {
-  max-width: 1100px;
+  color: white;
   text-align: center;
-  color: #ffffff;
-  animation: heroFade 0.9s ease forwards;
+  padding: 100px 20px 90px;
 }
 
-.hero-title {
-  font-size: 52px;
-  font-weight: 700;
+.hero h1 {
+  font-size: 48px;
+  margin: 0;
   letter-spacing: 0.5px;
 }
 
-.hero-subtitle {
+.role {
   margin-top: 12px;
   font-size: 18px;
-  opacity: 0.9;
+  opacity: 0.95;
 }
 
-.hero-tagline {
-  margin: 22px auto 34px;
-  max-width: 760px;
-  font-size: 16px;
+.tagline {
+  margin-top: 14px;
+  font-size: 15px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
   opacity: 0.85;
 }
 
-.hero-tagline span {
-  color: #60a5fa;
-  font-weight: 600;
+/* subtle entrance animation */
+.hero h1,
+.hero .role,
+.hero .tagline,
+.links {
+  animation: fadeUp 0.8s ease forwards;
 }
+
+.hero .role { animation-delay: 0.15s; }
+.hero .tagline { animation-delay: 0.3s; }
+.links { animation-delay: 0.45s; }
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 
 /* =======================
    BADGES
