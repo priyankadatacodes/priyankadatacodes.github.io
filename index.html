@@ -1,138 +1,319 @@
-<!-- ================= HERO ================= -->
-<header class="hero-modern">
-  <div class="hero-content">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Priyanka Lakra | Data Analytics Projects</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Business-focused Data Analytics Project Portfolio by Priyanka Lakra" />
 
-    <h1 class="hero-title">Priyanka Lakra</h1>
+  <!-- FONT -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <p class="hero-subtitle">
-      Data Analyst • Business Analytics • Insight Storytelling
-    </p>
+  <style>
+    :root {
+      --primary: #0f172a;
+      --accent: #2563eb;
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --text: #1e293b;
+      --muted: #64748b;
+      --border: #e2e8f0;
+      --success: #059669;
+    }
 
-    <p class="hero-tagline">
-      Transforming raw data into
-      <span>clear, actionable business insights</span>
-      through analytics, visualization, and real-world problem solving.
-    </p>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Inter", sans-serif;
+    }
 
-    <!-- SKILL BADGES -->
-    <div class="badge-container">
-      <span class="badge">Excel</span>
-      <span class="badge">SQL</span>
-      <span class="badge">Python</span>
-      <span class="badge">Power BI</span>
-      <span class="badge">Tableau</span>
-      <span class="badge">EDA</span>
-      <span class="badge">Machine Learning</span>
-      <span class="badge">Time Series</span>
-    </div>
+    body {
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
 
-    <!-- CTA BUTTONS -->
-    <div class="hero-actions">
-      <a href="https://github.com/priyankadatacodes" target="_blank" class="btn primary">
-        GitHub
-      </a>
-      <a href="https://www.kaggle.com/priyankalakraxdata" target="_blank" class="btn outline">
-        Kaggle
-      </a>
-    </div>
+    a { text-decoration: none; color: inherit; }
 
+    /* ================= NAV ================= */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.97);
+      border-bottom: 1px solid var(--border);
+      padding: 16px 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-weight: 800;
+      letter-spacing: -0.5px;
+    }
+
+    .nav-links a {
+      margin-left: 28px;
+      font-size: 0.95rem;
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+
+    /* ================= HERO ================= */
+    .hero {
+      padding: 120px 20px 90px;
+      text-align: center;
+      background: radial-gradient(circle at top, #eff6ff 0%, #ffffff 60%);
+    }
+
+    .hero h1 {
+      font-size: 3.1rem;
+      font-weight: 800;
+      letter-spacing: -1px;
+      margin-bottom: 14px;
+      color: var(--primary);
+    }
+
+    .hero p {
+      max-width: 760px;
+      margin: auto;
+      font-size: 1.1rem;
+      color: var(--muted);
+    }
+
+    /* ================= SECTION ================= */
+    section {
+      max-width: 1200px;
+      margin: auto;
+      padding: 100px 20px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .section-title h2 {
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+    }
+
+    .section-title p {
+      font-size: 1.05rem;
+      color: var(--muted);
+    }
+
+    /* ================= PROJECT GRID ================= */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+      gap: 40px;
+    }
+
+    .project-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 30px rgba(0,0,0,0.08);
+    }
+
+    .project-body {
+      padding: 34px;
+      flex: 1;
+    }
+
+    /* TAGS */
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .tag {
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--accent);
+      letter-spacing: 0.4px;
+    }
+
+    /* INTERNAL HEADINGS */
+    .project-heading {
+      margin: 18px 0 8px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+      color: #334155;
+    }
+
+    /* CONTENT */
+    .project-title {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .project-goal {
+      font-size: 0.95rem;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+
+    .project-points {
+      background: #f1f5f9;
+      padding: 16px;
+      border-radius: 10px;
+      font-size: 0.95rem;
+    }
+
+    .project-points li {
+      margin-bottom: 8px;
+      padding-left: 18px;
+      position: relative;
+    }
+
+    .project-points li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--success);
+      font-weight: bold;
+    }
+
+    .project-outcome {
+      margin-top: 14px;
+      font-size: 0.95rem;
+      background: #f8fafc;
+      padding: 12px 14px;
+      border-left: 4px solid var(--accent);
+      border-radius: 6px;
+    }
+
+    /* FOOTER LINKS */
+    .project-footer {
+      padding: 18px 34px;
+      border-top: 1px solid var(--border);
+      background: #fafafa;
+      display: flex;
+      gap: 22px;
+    }
+
+    .project-link {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--primary);
+    }
+
+    .project-link:hover {
+      color: var(--accent);
+    }
+
+    /* ================= FOOTER ================= */
+    footer {
+      text-align: center;
+      padding: 50px 20px;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2.3rem; }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="logo">PRIYANKA • PROJECTS</div>
+  <div class="nav-links">
+    <a href="#projects">Projects</a>
+    <a href="https://github.com/priyankadatacodes" target="_blank">GitHub</a>
+    <a href="https://www.kaggle.com/priyankalakraxdata" target="_blank">Kaggle</a>
   </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <h1>Data Analytics Project Portfolio</h1>
+  <p>
+    Business-focused analytics projects showcasing
+    <strong>problem solving, insights, and real-world impact</strong>.
+  </p>
 </header>
 
-
-<!-- SKILLS -->
-<section class="section">
-  <h2>Core Skills</h2>
-
-  <div class="skill">
-    <span>Python</span><div class="bar"><div class="progress python"></div></div>
-  </div>
-  <div class="skill">
-    <span>SQL (MySQL)</span><div class="bar"><div class="progress sql"></div></div>
-  </div>
-  <div class="skill">
-    <span>Power BI</span><div class="bar"><div class="progress powerbi"></div></div>
-  </div>
-  <div class="skill">
-    <span>EDA & Business Analysis</span><div class="bar"><div class="progress eda"></div></div>
-  </div>
-</section>
-
 <!-- PROJECTS -->
-<section class="section soft">
-  <h2>Featured Projects</h2>
-
-  <div class="grid">
-    <div class="card">
-      <h3>Customer RFM Analysis</h3>
-      <p>Customer segmentation for targeted marketing & retention.</p>
-      <span>SQL • Python • Power BI</span>
-      <a href="https://github.com/priyankadatacodes" target="_blank">View Project →</a>
-    </div>
-
-    <div class="card">
-      <h3>Telco Customer Churn Analysis</h3>
-      <p>Identifying churn drivers & predicting at-risk customers.</p>
-      <span>SQL • Python • ML</span>
-      <a href="https://github.com/priyankadatacodes" target="_blank">View Project →</a>
-    </div>
-
-    <div class="card">
-      <h3>Credit Card Fraud Detection</h3>
-      <p>Detecting fraudulent transactions using predictive models.</p>
-      <span>Python • XGBoost</span>
-      <a href="https://github.com/priyankadatacodes" target="_blank">View Project →</a>
-    </div>
+<section id="projects">
+  <div class="section-title">
+    <h2>Featured Projects</h2>
+    <p>End-to-end analytics work across multiple business domains.</p>
   </div>
-</section>
 
-<!-- KAGGLE -->
-<section class="section">
-  <h2>Kaggle Case Studies</h2>
+  <div class="projects-grid">
 
-  <div class="grid">
-    <div class="card">
-      <h3>Social Media Engagement Analysis</h3>
-      <p>Analyzing content performance to improve engagement strategy.</p>
-      <span>EDA • KPI • Python</span>
-      <a href="https://www.kaggle.com/code/priyankalakraxdata/social-media-content-performance-engagement-da" target="_blank">
-        View Notebook →
-      </a>
+    <!-- PROJECT TEMPLATE (COPY THIS FOR EVERY NEW PROJECT) -->
+    <div class="project-card">
+      <div class="project-body">
+
+        <div class="tags">
+          <span class="tag">Marketing Analytics</span>
+          <span class="tag">Case Study</span>
+          <span class="tag">Python</span>
+        </div>
+
+        <h3 class="project-title">Social Media Content Performance Analysis</h3>
+
+        <h4 class="project-heading">Business Goal</h4>
+        <p class="project-goal">
+          Identify high-performing content and platforms to improve engagement and ROI.
+        </p>
+
+        <h4 class="project-heading">What I Did</h4>
+        <ul class="project-points">
+          <li>Cleaned and prepared engagement datasets</li>
+          <li>Built KPIs such as engagement rate and interaction metrics</li>
+          <li>Compared platform-wise and content-type performance</li>
+          <li>Performed trend analysis on engagement patterns</li>
+        </ul>
+
+        <h4 class="project-heading">Key Outcome</h4>
+        <p class="project-outcome">
+          Identified content formats and platforms driving higher engagement,
+          enabling data-backed content strategy decisions.
+        </p>
+
+      </div>
+
+      <div class="project-footer">
+        <a class="project-link" href="https://www.kaggle.com/code/priyankalakraxdata/social-media-content-performance-engagement-da" target="_blank">Kaggle Notebook</a>
+        <a class="project-link" href="https://github.com/priyankadatacodes" target="_blank">GitHub Repo</a>
+      </div>
     </div>
 
-    <div class="card">
-      <h3>Global Energy Consumption Forecasting</h3>
-      <p>Trend analysis & forecasting for sustainability planning.</p>
-      <span>Time Series • Forecasting</span>
-      <a href="https://www.kaggle.com/code/priyankalakraxdata/global-energy-consumption-analysis-forecast/notebook" target="_blank">
-        View Notebook →
-      </a>
-    </div>
+    <!-- ADD MORE PROJECT CARDS BELOW -->
+
   </div>
-</section>
-
-<!-- ABOUT -->
-<section class="section soft">
-  <h2>About Me</h2>
-  <p class="about">
-    I am an early-career Data Analyst with strong hands-on experience in
-    real-world datasets, analytics workflows, and business-driven insights.
-    I enjoy converting data into clear, decision-ready stories.
-  </p>
 </section>
 
 <footer>
-  <p>📍 Raipur, Chhattisgarh</p>
-  <p>Open to Data Analyst roles (Fresher / Early Career)</p>
+  © 2025 Priyanka Lakra • Data Analytics Project Portfolio
 </footer>
-
-<!-- INTERACTION SCRIPT -->
-<script>
-  const obs = new IntersectionObserver(entries =>
-    entries.forEach(e => e.isIntersecting && e.target.classList.add("show"))
-  );
-  document.querySelectorAll(".section,.card").forEach(el => obs.observe(el));
-</script>
 
 </body>
 </html>
