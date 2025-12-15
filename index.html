@@ -2,12 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Priyanka Lakra | Data Analytics Projects</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Business-focused Data Analytics Project Portfolio by Priyanka Lakra" />
+  <meta name="description" content="Project-focused Data Analyst Portfolio showcasing business-driven analytics case studies.">
 
-  <!-- FONT -->
+  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 
   <style>
     :root {
@@ -18,7 +21,7 @@
       --text: #1e293b;
       --muted: #64748b;
       --border: #e2e8f0;
-      --success: #059669;
+      --success: #16a34a;
     }
 
     * {
@@ -36,12 +39,12 @@
 
     a { text-decoration: none; color: inherit; }
 
-    /* ================= NAV ================= */
+    /* ---------------- NAV ---------------- */
     nav {
       position: sticky;
       top: 0;
       z-index: 100;
-      background: rgba(255,255,255,0.97);
+      background: rgba(255,255,255,0.96);
       border-bottom: 1px solid var(--border);
       padding: 16px 6%;
       display: flex;
@@ -52,6 +55,7 @@
     .logo {
       font-weight: 800;
       letter-spacing: -0.5px;
+      color: var(--primary);
     }
 
     .nav-links a {
@@ -65,18 +69,40 @@
       color: var(--accent);
     }
 
-    /* ================= HERO ================= */
+    /* ---------------- HERO ---------------- */
     .hero {
-      padding: 120px 20px 90px;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-align: center;
+      padding: 120px 20px;
       background: radial-gradient(circle at top, #eff6ff 0%, #ffffff 60%);
+      animation: fadeUp 1s ease;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero-badge {
+      display: inline-block;
+      margin-bottom: 22px;
+      padding: 6px 16px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      border-radius: 999px;
+      background: #dbeafe;
+      color: var(--accent);
+      border: 1px solid #bfdbfe;
     }
 
     .hero h1 {
-      font-size: 3.1rem;
+      font-size: 3.2rem;
       font-weight: 800;
       letter-spacing: -1px;
-      margin-bottom: 14px;
+      margin-bottom: 16px;
       color: var(--primary);
     }
 
@@ -85,34 +111,74 @@
       margin: auto;
       font-size: 1.1rem;
       color: var(--muted);
+      margin-bottom: 36px;
     }
 
-    /* ================= SECTION ================= */
+    .hero-cta {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 14px 28px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: 0.25s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: white;
+      box-shadow: 0 10px 20px rgba(37,99,235,0.25);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      background: #1d4ed8;
+    }
+
+    .btn-outline {
+      border: 1px solid var(--border);
+      background: white;
+      color: var(--text);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--text);
+    }
+
+    /* ---------------- PROJECTS ---------------- */
     section {
       max-width: 1200px;
       margin: auto;
       padding: 100px 20px;
     }
 
-    .section-title {
+    .section-header {
       text-align: center;
       margin-bottom: 60px;
     }
 
-    .section-title h2 {
+    .section-header h2 {
       font-size: 2.2rem;
       margin-bottom: 10px;
+      color: var(--primary);
     }
 
-    .section-title p {
-      font-size: 1.05rem;
+    .section-header p {
       color: var(--muted);
+      font-size: 1.05rem;
     }
 
-    /* ================= PROJECT GRID ================= */
     .projects-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
       gap: 40px;
     }
 
@@ -122,21 +188,20 @@
       border-radius: 16px;
       display: flex;
       flex-direction: column;
-      transition: all 0.3s ease;
+      transition: 0.3s ease;
     }
 
     .project-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 20px 30px rgba(0,0,0,0.08);
+      transform: translateY(-8px);
+      box-shadow: 0 20px 35px rgba(0,0,0,0.08);
     }
 
     .project-body {
-      padding: 34px;
+      padding: 32px;
       flex: 1;
     }
 
-    /* TAGS */
-    .tags {
+    .project-tags {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
@@ -146,32 +211,21 @@
     .tag {
       font-size: 0.7rem;
       font-weight: 700;
+      letter-spacing: 0.4px;
       text-transform: uppercase;
       color: var(--accent);
-      letter-spacing: 0.4px;
     }
 
-    /* INTERNAL HEADINGS */
-    .project-heading {
-      margin: 18px 0 8px;
-      font-size: 0.85rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.4px;
-      color: #334155;
-    }
-
-    /* CONTENT */
     .project-title {
-      font-size: 1.4rem;
+      font-size: 1.45rem;
       font-weight: 700;
-      margin-bottom: 8px;
+      margin-bottom: 10px;
     }
 
-    .project-goal {
-      font-size: 0.95rem;
+    .project-desc {
+      font-size: 1rem;
       color: var(--muted);
-      margin-bottom: 10px;
+      margin-bottom: 18px;
     }
 
     .project-points {
@@ -195,35 +249,28 @@
       font-weight: bold;
     }
 
-    .project-outcome {
-      margin-top: 14px;
-      font-size: 0.95rem;
-      background: #f8fafc;
-      padding: 12px 14px;
-      border-left: 4px solid var(--accent);
-      border-radius: 6px;
-    }
-
-    /* FOOTER LINKS */
     .project-footer {
-      padding: 18px 34px;
+      padding: 18px 32px;
       border-top: 1px solid var(--border);
       background: #fafafa;
       display: flex;
-      gap: 22px;
+      gap: 20px;
     }
 
     .project-link {
       font-size: 0.9rem;
       font-weight: 600;
       color: var(--primary);
+      display: flex;
+      align-items: center;
+      gap: 8px;
     }
 
     .project-link:hover {
       color: var(--accent);
     }
 
-    /* ================= FOOTER ================= */
+    /* ---------------- FOOTER ---------------- */
     footer {
       text-align: center;
       padding: 50px 20px;
@@ -232,7 +279,8 @@
     }
 
     @media (max-width: 768px) {
-      .hero h1 { font-size: 2.3rem; }
+      .hero h1 { font-size: 2.4rem; }
+      .nav-links { display: none; }
     }
   </style>
 </head>
@@ -251,62 +299,88 @@
 
 <!-- HERO -->
 <header class="hero">
-  <h1>Data Analytics Project Portfolio</h1>
-  <p>
-    Business-focused analytics projects showcasing
-    <strong>problem solving, insights, and real-world impact</strong>.
-  </p>
+  <div>
+    <span class="hero-badge">Open to Data Analyst Roles</span>
+    <h1>Data Analytics Project Portfolio</h1>
+    <p>
+      Business-focused analytics projects that demonstrate
+      <strong>problem solving, insights, and real-world impact</strong>.
+    </p>
+    <div class="hero-cta">
+      <a href="#projects" class="btn btn-primary"><i class="fas fa-layer-group"></i> View Projects</a>
+      <a href="https://github.com/priyankadatacodes" target="_blank" class="btn btn-outline">
+        <i class="fab fa-github"></i> GitHub
+      </a>
+    </div>
+  </div>
 </header>
 
 <!-- PROJECTS -->
 <section id="projects">
-  <div class="section-title">
+  <div class="section-header">
     <h2>Featured Projects</h2>
-    <p>End-to-end analytics work across multiple business domains.</p>
+    <p>End-to-end case studies built using Python, SQL, and BI tools.</p>
   </div>
 
   <div class="projects-grid">
 
-    <!-- PROJECT TEMPLATE (COPY THIS FOR EVERY NEW PROJECT) -->
+    <!-- PROJECT 1 -->
     <div class="project-card">
       <div class="project-body">
-
-        <div class="tags">
+        <div class="project-tags">
           <span class="tag">Marketing Analytics</span>
-          <span class="tag">Case Study</span>
           <span class="tag">Python</span>
+          <span class="tag">EDA</span>
         </div>
-
-        <h3 class="project-title">Social Media Content Performance Analysis</h3>
-
-        <h4 class="project-heading">Business Goal</h4>
-        <p class="project-goal">
-          Identify high-performing content and platforms to improve engagement and ROI.
+        <div class="project-title">Social Media Content Performance Analysis</div>
+        <p class="project-desc">
+          Analyzed engagement data to identify high-performing content formats
+          and platforms for better ROI.
         </p>
-
-        <h4 class="project-heading">What I Did</h4>
         <ul class="project-points">
-          <li>Cleaned and prepared engagement datasets</li>
-          <li>Built KPIs such as engagement rate and interaction metrics</li>
-          <li>Compared platform-wise and content-type performance</li>
-          <li>Performed trend analysis on engagement patterns</li>
+          <li>Built engagement KPIs and metrics</li>
+          <li>Platform-wise and content-type comparison</li>
+          <li>Actionable recommendations for content strategy</li>
         </ul>
-
-        <h4 class="project-heading">Key Outcome</h4>
-        <p class="project-outcome">
-          Identified content formats and platforms driving higher engagement,
-          enabling data-backed content strategy decisions.
-        </p>
-
       </div>
-
       <div class="project-footer">
-        <a class="project-link" href="https://www.kaggle.com/code/priyankalakraxdata/social-media-content-performance-engagement-da" target="_blank">Kaggle Notebook</a>
-        <a class="project-link" href="https://github.com/priyankadatacodes" target="_blank">GitHub Repo</a>
+        <a class="project-link" href="https://www.kaggle.com/code/priyankalakraxdata/social-media-content-performance-engagement-da" target="_blank">
+          <i class="fas fa-book"></i> Kaggle
+        </a>
+        <a class="project-link" href="https://github.com/priyankadatacodes" target="_blank">
+          <i class="fab fa-github"></i> GitHub
+        </a>
       </div>
     </div>
 
-    <!-- ADD MORE PROJECT CARDS BELOW -->
+    <!-- PROJECT 2 -->
+    <div class="project-card">
+      <div class="project-body">
+        <div class="project-tags">
+          <span class="tag">Time Series</span>
+          <span class="tag">Forecasting</span>
+          <span class="tag">Energy Analytics</span>
+        </div>
+        <div class="project-title">Global Energy Consumption Forecasting</div>
+        <p class="project-desc">
+          Forecasted global energy demand using historical trends
+          to support planning and sustainability insights.
+        </p>
+        <ul class="project-points">
+          <li>Trend analysis across countries</li>
+          <li>Renewable vs non-renewable comparison</li>
+          <li>Forecast-driven business insights</li>
+        </ul>
+      </div>
+      <div class="project-footer">
+        <a class="project-link" href="https://www.kaggle.com/code/priyankalakraxdata/global-energy-consumption-analysis-forecast/notebook" target="_blank">
+          <i class="fas fa-book"></i> Kaggle
+        </a>
+        <a class="project-link" href="https://github.com/priyankadatacodes" target="_blank">
+          <i class="fab fa-github"></i> GitHub
+        </a>
+      </div>
+    </div>
 
   </div>
 </section>
