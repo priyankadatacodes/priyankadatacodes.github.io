@@ -12,518 +12,218 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 
   <style>
-    /* ================= RESET & THEME ================= */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: "Inter", sans-serif;
+    *{margin:0;padding:0;box-sizing:border-box;font-family:Inter,sans-serif}
+    :root{
+      --primary:#0f172a;
+      --accent:#2563eb;
+      --bg:#ffffff;
+      --soft:#f8fafc;
+      --text:#020617;
+      --muted:#64748b;
+      --border:#e2e8f0;
+    }
+    html{scroll-behavior:smooth}
+    body{background:var(--bg);color:var(--text);line-height:1.6}
+    a{text-decoration:none;color:inherit}
+
+    nav{
+      position:fixed;top:0;width:100%;
+      background:rgba(255,255,255,.9);
+      backdrop-filter:blur(10px);
+      border-bottom:1px solid var(--border);
+      padding:16px 6%;
+      display:flex;justify-content:space-between;align-items:center;
+      z-index:1000;
+    }
+    .logo{font-weight:800;font-size:1.2rem}
+    .nav-links{display:flex;gap:28px}
+    .nav-links a{color:var(--muted);font-weight:500}
+    .nav-links a:hover{color:var(--accent)}
+
+    section{max-width:1200px;margin:auto;padding:100px 20px}
+
+    .hero{
+      min-height:100vh;padding-top:120px;
+      display:flex;flex-direction:column;
+      align-items:center;justify-content:center;
+      text-align:center;
+      background:radial-gradient(circle at top,#eff6ff 0%,#fff 60%);
+    }
+    .badge{
+      background:#e0edff;color:var(--accent);
+      padding:6px 16px;border-radius:20px;
+      font-size:.85rem;font-weight:600;margin-bottom:24px;
+    }
+    .hero h1{font-size:3.2rem;font-weight:800;line-height:1.1}
+    .hero h1 span{color:var(--accent)}
+    .hero p{max-width:700px;color:var(--muted);margin:25px 0 40px}
+
+    .btns{display:flex;gap:16px;flex-wrap:wrap;justify-content:center}
+    .btn{
+      padding:14px 30px;border-radius:999px;
+      font-weight:600;font-size:.95rem;
+      border:1px solid var(--border);
+      background:#fff;transition:.25s;
+    }
+    .btn.primary{background:var(--accent);color:#fff;border-color:var(--accent)}
+    .btn.primary:hover{transform:translateY(-3px);box-shadow:0 10px 20px rgba(37,99,235,.25)}
+    .btn.outline:hover{border-color:var(--accent);color:var(--accent)}
+
+    .section-header{text-align:center;margin-bottom:60px}
+    .section-header h2{font-size:2.3rem;font-weight:700}
+    .section-header p{color:var(--muted)}
+
+    .about-grid{
+      display:grid;grid-template-columns:3fr 2fr;
+      gap:50px;align-items:center;
+    }
+    .stats{
+      background:var(--soft);border:1px solid var(--border);
+      border-radius:14px;padding:30px;
+    }
+    .stat{margin-bottom:18px}
+    .stat small{color:var(--muted);font-size:.75rem;text-transform:uppercase}
+    .stat strong{display:block;margin-top:6px}
+
+    .skills-grid{
+      display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:30px;
+    }
+    .skill{
+      background:#fff;border:1px solid var(--border);
+      border-radius:14px;padding:32px;transition:.3s;
+    }
+    .skill:hover{transform:translateY(-6px);border-color:var(--accent)}
+    .skill i{font-size:1.8rem;color:var(--accent);margin-bottom:18px}
+    .badges{display:flex;flex-wrap:wrap;gap:10px}
+    .badge-skill{
+      background:var(--soft);border:1px solid var(--border);
+      padding:6px 12px;border-radius:8px;font-size:.85rem;
     }
 
-    :root {
-      --primary: #0f172a;
-      --accent: #2563eb;
-      --bg: #ffffff;
-      --bg-soft: #f8fafc;
-      --text-dark: #020617;
-      --text-light: #64748b;
-      --border: #e2e8f0;
+    .projects{
+      display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
+      gap:40px;
+    }
+    .project{
+      border:1px solid var(--border);
+      border-radius:16px;background:#fff;
+      transition:.3s;overflow:hidden;
+    }
+    .project:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(0,0,0,.12)}
+    .project-body{padding:30px}
+    .project-footer{
+      border-top:1px solid var(--border);
+      padding:20px 30px;display:flex;gap:20px;
     }
 
-    html {
-      scroll-behavior: smooth;
+    .cta{
+      background:var(--primary);color:#fff;
+      border-radius:20px;text-align:center;
+      padding:80px 20px;
     }
-
-    body {
-      background: var(--bg);
-      color: var(--text-dark);
-      line-height: 1.6;
+    .cta p{color:#cbd5f5;margin:20px 0 40px}
+    .socials{display:flex;justify-content:center;gap:20px}
+    .socials a{
+      width:46px;height:46px;border-radius:50%;
+      background:rgba(255,255,255,.15);
+      display:flex;align-items:center;justify-content:center;
+      transition:.3s;
     }
+    .socials a:hover{background:var(--accent);transform:translateY(-4px)}
 
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    section {
-      padding: 100px 20px;
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    /* ================= NAV ================= */
-    nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background: rgba(255,255,255,0.9);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid var(--border);
-      z-index: 1000;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 16px 6%;
-    }
-
-    .logo {
-      font-weight: 800;
-      font-size: 1.2rem;
-      color: var(--primary);
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 28px;
-    }
-
-    .nav-links a {
-      font-size: 0.95rem;
-      color: var(--text-light);
-      font-weight: 500;
-    }
-
-    .nav-links a:hover {
-      color: var(--accent);
-    }
-
-    /* ================= HERO ================= */
-    .hero {
-      min-height: 100vh;
-      padding-top: 120px;
-      text-align: center;
-      background:
-        radial-gradient(circle at top, #eff6ff 0%, #ffffff 60%);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .badge {
-      background: #e0edff;
-      color: var(--accent);
-      padding: 6px 16px;
-      border-radius: 20px;
-      font-size: 0.85rem;
-      font-weight: 600;
-      margin-bottom: 24px;
-      animation: fadeDown 0.8s ease;
-    }
-
-    .hero h1 {
-      font-size: 3.5rem;
-      font-weight: 800;
-      line-height: 1.1;
-      margin-bottom: 18px;
-      animation: fadeUp 0.9s ease;
-    }
-
-    .hero h1 span {
-      color: var(--accent);
-    }
-
-    .hero p {
-      max-width: 700px;
-      color: var(--text-light);
-      font-size: 1.1rem;
-      margin-bottom: 40px;
-      animation: fadeUp 1.1s ease;
-    }
-
-    .btn-group {
-      display: flex;
-      gap: 16px;
-      flex-wrap: wrap;
-      justify-content: center;
-      animation: fadeUp 1.3s ease;
-    }
-
-    .btn {
-      padding: 14px 30px;
-      border-radius: 999px;
-      font-weight: 600;
-      font-size: 0.95rem;
-      border: 1px solid var(--border);
-      background: white;
-      cursor: pointer;
-      transition: 0.25s;
-    }
-
-    .btn.primary {
-      background: var(--accent);
-      color: white;
-      border-color: var(--accent);
-    }
-
-    .btn.primary:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 10px 20px rgba(37,99,235,0.25);
-    }
-
-    .btn.outline:hover {
-      border-color: var(--accent);
-      color: var(--accent);
-    }
-
-    /* ================= SECTION HEADER ================= */
-    .section-header {
-      text-align: center;
-      margin-bottom: 60px;
-    }
-
-    .section-header h2 {
-      font-size: 2.3rem;
-      font-weight: 700;
-      margin-bottom: 12px;
-    }
-
-    .section-header p {
-      color: var(--text-light);
-    }
-
-    /* ================= ABOUT ================= */
-    .about-grid {
-      display: grid;
-      grid-template-columns: 3fr 2fr;
-      gap: 50px;
-      align-items: center;
-    }
-
-    .about-text p {
-      margin-bottom: 18px;
-      color: #334155;
-    }
-
-    .stats {
-      background: var(--bg-soft);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 30px;
-    }
-
-    .stat {
-      margin-bottom: 20px;
-    }
-
-    .stat small {
-      color: var(--text-light);
-      text-transform: uppercase;
-      font-size: 0.75rem;
-      letter-spacing: 0.06em;
-    }
-
-    .stat strong {
-      display: block;
-      margin-top: 6px;
-      font-size: 1.05rem;
-    }
-
-    /* ================= SKILLS ================= */
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 30px;
-    }
-
-    .skill-card {
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 32px;
-      background: white;
-      transition: 0.3s;
-    }
-
-    .skill-card:hover {
-      transform: translateY(-6px);
-      border-color: var(--accent);
-      box-shadow: 0 14px 30px rgba(0,0,0,0.08);
-    }
-
-    .skill-card i {
-      font-size: 1.8rem;
-      color: var(--accent);
-      margin-bottom: 18px;
-    }
-
-    .skill-card h3 {
-      margin-bottom: 14px;
-    }
-
-    .badges {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .badge-skill {
-      background: var(--bg-soft);
-      border: 1px solid var(--border);
-      padding: 6px 12px;
-      border-radius: 8px;
-      font-size: 0.85rem;
-    }
-
-    /* ================= PROJECTS ================= */
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-      gap: 40px;
-    }
-
-    .project {
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      overflow: hidden;
-      transition: 0.3s;
-      background: white;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .project:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 18px 40px rgba(0,0,0,0.12);
-    }
-
-    .project-body {
-      padding: 30px;
-      flex: 1;
-    }
-
-    .project h3 {
-      margin-bottom: 10px;
-    }
-
-    .project p {
-      color: var(--text-light);
-      margin-bottom: 20px;
-    }
-
-    .project ul li {
-      font-size: 0.9rem;
-      margin-bottom: 8px;
-    }
-
-    .project-footer {
-      padding: 20px 30px;
-      border-top: 1px solid var(--border);
-      display: flex;
-      gap: 20px;
-    }
-
-    /* ================= CONTACT ================= */
-    .cta {
-      background: var(--primary);
-      color: white;
-      text-align: center;
-      border-radius: 20px;
-      padding: 80px 20px;
-    }
-
-    .cta p {
-      color: #cbd5f5;
-      margin: 20px 0 40px;
-    }
-
-    .socials {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-    }
-
-    .socials a {
-      width: 46px;
-      height: 46px;
-      border-radius: 50%;
-      background: rgba(255,255,255,0.15);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: 0.3s;
-    }
-
-    .socials a:hover {
-      background: var(--accent);
-      transform: translateY(-4px);
-    }
-
-    /* ================= ANIMATIONS ================= */
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes fadeDown {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    /* ================= RESPONSIVE ================= */
-    @media(max-width: 768px) {
-      .hero h1 { font-size: 2.4rem; }
-      .about-grid { grid-template-columns: 1fr; }
-      .nav-links { display: none; }
+    @media(max-width:768px){
+      .hero h1{font-size:2.4rem}
+      .about-grid{grid-template-columns:1fr}
+      .nav-links{display:none}
     }
   </style>
 </head>
 
 <body>
 
-  <!-- NAV -->
-  <nav>
-    <div class="logo">PIX.ANALYTICS</div>
-    <div class="nav-links">
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
+<nav>
+  <div class="logo">PIX.ANALYTICS</div>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="badge">Available for Immediate Joining</div>
+  <h1>Turning <span>Data</span> into Business Impact</h1>
+  <p>EEE Graduate turned <strong>Data Analyst</strong> building ROI-driven dashboards and insights.</p>
+  <div class="btns">
+    <a href="#projects" class="btn primary">View Projects</a>
+    <a href="resume.pdf" class="btn outline" download>Download CV</a>
+  </div>
+</section>
+
+<section id="about">
+  <div class="section-header"><h2>About Me</h2></div>
+  <div class="about-grid">
+    <p>I solve real business problems using SQL, Python and BI tools.</p>
+    <div class="stats">
+      <div class="stat"><small>Education</small><strong>B.Tech (EEE) + PGDCA</strong></div>
+      <div class="stat"><small>Focus</small><strong>Business Analytics</strong></div>
     </div>
-  </nav>
+  </div>
+</section>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="badge">Available for Immediate Joining</div>
-    <h1>Turning <span>Data</span> into Business Impact</h1>
-    <p>
-      EEE Graduate turned <strong>Data Analyst</strong>, building
-      ROI-driven dashboards, predictive models, and decision-ready insights.
-    </p>
-    <div class="btn-group">
-      <a href="#projects" class="btn primary">View Projects</a>
-      <a href="#" class="btn outline">Download CV</a>
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section id="about">
-    <div class="section-header">
-      <h2>About Me</h2>
-    </div>
-
-    <div class="about-grid">
-      <div class="about-text">
-        <p>
-          I bridge the gap between engineering logic and business analytics.
-          My background in EEE helps me understand complex systems, while my
-          analytics skills convert data into growth strategies.
-        </p>
-        <p>
-          I don’t just analyze data — I solve real business problems using
-          SQL, Python, and BI tools.
-        </p>
-      </div>
-
-      <div class="stats">
-        <div class="stat">
-          <small>Focus</small>
-          <strong>Business Analytics & BI</strong>
-        </div>
-        <div class="stat">
-          <small>Education</small>
-          <strong>B.Tech (EEE) + PGDCA</strong>
-        </div>
-        <div class="stat">
-          <small>Domains</small>
-          <strong>E-commerce, Marketing</strong>
-        </div>
+<section id="skills">
+  <div class="section-header"><h2>Skills</h2></div>
+  <div class="skills-grid">
+    <div class="skill">
+      <i class="fas fa-database"></i>
+      <h3>SQL & Databases</h3>
+      <div class="badges">
+        <span class="badge-skill">MySQL</span>
+        <span class="badge-skill">Joins</span>
+        <span class="badge-skill">Window Functions</span>
       </div>
     </div>
-  </section>
-
-  <!-- SKILLS -->
-  <section id="skills">
-    <div class="section-header">
-      <h2>Technical Skills</h2>
-    </div>
-
-    <div class="skills-grid">
-      <div class="skill-card">
-        <i class="fas fa-brain"></i>
-        <h3>Data Analysis</h3>
-        <div class="badges">
-          <span class="badge-skill">Python</span>
-          <span class="badge-skill">Pandas</span>
-          <span class="badge-skill">EDA</span>
-          <span class="badge-skill">Statistics</span>
-        </div>
-      </div>
-
-      <div class="skill-card">
-        <i class="fas fa-database"></i>
-        <h3>Databases</h3>
-        <div class="badges">
-          <span class="badge-skill">SQL</span>
-          <span class="badge-skill">MySQL</span>
-          <span class="badge-skill">Joins</span>
-          <span class="badge-skill">Window Functions</span>
-        </div>
-      </div>
-
-      <div class="skill-card">
-        <i class="fas fa-chart-line"></i>
-        <h3>BI & Visualization</h3>
-        <div class="badges">
-          <span class="badge-skill">Power BI</span>
-          <span class="badge-skill">Tableau</span>
-          <span class="badge-skill">Excel</span>
-        </div>
+    <div class="skill">
+      <i class="fas fa-chart-line"></i>
+      <h3>Analytics</h3>
+      <div class="badges">
+        <span class="badge-skill">Python</span>
+        <span class="badge-skill">EDA</span>
+        <span class="badge-skill">Power BI</span>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- PROJECTS -->
-  <section id="projects">
-    <div class="section-header">
-      <h2>Projects</h2>
-    </div>
-
-    <div class="projects-grid">
-      <div class="project">
-        <div class="project-body">
-          <h3>E-Commerce Funnel Analysis</h3>
-          <p>Identified revenue leakage and drop-off points.</p>
-          <ul>
-            <li>SQL conversion metrics</li>
-            <li>Python EDA</li>
-            <li>Power BI dashboard</li>
-          </ul>
-        </div>
-        <div class="project-footer">
-          <a href="#">GitHub</a>
-          <a href="#">Dashboard</a>
-        </div>
+<section id="projects">
+  <div class="section-header"><h2>Projects</h2></div>
+  <div class="projects">
+    <div class="project">
+      <div class="project-body">
+        <h3>E-commerce Funnel Analysis</h3>
+        <p>Identified revenue leakage using SQL & dashboards.</p>
       </div>
-
-      <div class="project">
-        <div class="project-body">
-          <h3>Customer Segmentation (RFM)</h3>
-          <p>Segmented users for retention strategies.</p>
-          <ul>
-            <li>RFM scoring</li>
-            <li>SQL + Python</li>
-            <li>Business insights</li>
-          </ul>
-        </div>
-        <div class="project-footer">
-          <a href="#">GitHub</a>
-        </div>
+      <div class="project-footer">
+        <a href="#">GitHub</a>
+        <a href="#">Dashboard</a>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- CONTACT -->
-  <section id="contact">
-    <div class="cta">
-      <h2>Let’s work together</h2>
-      <p>Open for Data Analyst opportunities</p>
-      <div class="socials">
-        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-        <a href="#"><i class="fab fa-github"></i></a>
-        <a href="#"><i class="fas fa-envelope"></i></a>
-      </div>
+<section id="contact">
+  <div class="cta">
+    <h2>Let’s Work Together</h2>
+    <p>Open for Data Analyst roles</p>
+    <div class="socials">
+      <a href="https://linkedin.com/in/YOUR-LINK" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://github.com/YOUR-USERNAME" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="mailto:youremail@gmail.com"><i class="fas fa-envelope"></i></a>
     </div>
-  </section>
+  </div>
+</section>
 
 </body>
 </html>
