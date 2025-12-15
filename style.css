@@ -1,121 +1,182 @@
-body {
+:root {
+  --bg-main: #020617;
+  --bg-card: #0f172a;
+  --accent: #38bdf8;
+  --text-main: #e5e7eb;
+  --text-muted: #94a3b8;
+  --border: #1e293b;
+  --success: #22c55e;
+}
+
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: Inter, Arial, sans-serif;
-  background: #020617;
-  color: #e5e7eb;
+}
+
+body {
+  background: var(--bg-main);
+  color: var(--text-main);
+  line-height: 1.6;
+}
+
+/* NAV */
+nav {
+  background: rgba(2, 6, 23, 0.9);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(10px);
+}
+
+.logo {
+  color: var(--accent);
+}
+
+.nav-links a {
+  color: var(--text-muted);
+}
+.nav-links a:hover {
+  color: var(--accent);
 }
 
 /* HERO */
 .hero {
-  padding: 90px 20px;
+  min-height: 100vh;
   text-align: center;
+  background: radial-gradient(circle at top, #0f172a, #020617);
 }
 
-.badge {
-  background: #0f172a;
-  padding: 6px 14px;
-  border-radius: 20px;
-  font-size: 13px;
-  color: #38bdf8;
+.hero-badge {
+  background: var(--bg-card);
+  color: var(--accent);
+  border: 1px solid var(--border);
 }
 
 .hero h1 {
-  font-size: 46px;
-  line-height: 1.2;
+  color: var(--text-main);
 }
 
-.hero span {
-  color: #38bdf8;
-}
-
+.hero h2,
 .hero p {
-  max-width: 600px;
-  margin: 20px auto;
-  color: #94a3b8;
+  color: var(--text-muted);
 }
 
 /* BUTTONS */
-.btn {
-  display: inline-block;
-  margin: 10px;
-  padding: 12px 24px;
-  border-radius: 30px;
-  background: #38bdf8;
+.btn-primary {
+  background: var(--accent);
   color: #020617;
-  font-weight: bold;
-  text-decoration: none;
+  border: none;
 }
 
-.btn.secondary {
+.btn-outline {
   background: transparent;
-  border: 1px solid #38bdf8;
-  color: #38bdf8;
+  border: 1px solid var(--accent);
+  color: var(--accent);
 }
 
 /* SECTIONS */
-.section {
-  max-width: 1100px;
-  margin: 80px auto;
-  padding: 0 20px;
+section {
+  max-width: 1200px;
 }
 
-.section h2 {
-  margin-bottom: 30px;
+.section-title {
+  color: var(--text-main);
 }
 
-/* FEATURES */
-.features {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
+.section-subtitle {
+  color: var(--text-muted);
 }
 
-.feature {
-  background: #0f172a;
-  padding: 20px;
-  border-radius: 14px;
-  text-align: center;
+/* CARDS */
+.stats-box,
+.skill-card,
+.project-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  box-shadow: none;
+}
+
+.skill-card:hover,
+.project-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-4px);
+}
+
+/* SKILLS */
+.skill-badge {
+  background: #020617;
+  border: 1px solid var(--border);
+  color: var(--text-muted);
 }
 
 /* PROJECTS */
-.projects {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 25px;
+.tag {
+  color: var(--accent);
 }
 
-.card {
-  background: #0f172a;
-  padding: 25px;
-  border-radius: 18px;
+.project-desc {
+  color: var(--text-muted);
 }
 
-.card h3 {
-  margin-top: 0;
-  color: #38bdf8;
+.project-metrics {
+  background: #020617;
 }
 
-.domain {
-  font-size: 13px;
-  color: #94a3b8;
+.metric-icon {
+  color: var(--success);
 }
 
-.card ul {
-  padding-left: 18px;
-  color: #cbd5f5;
+.project-footer {
+  background: #020617;
+  border-top: 1px solid var(--border);
 }
 
-/* LINKS */
-.links a {
-  margin-right: 15px;
-  color: #38bdf8;
-  text-decoration: none;
+.project-link {
+  color: var(--text-muted);
+}
+.project-link:hover {
+  color: var(--accent);
+}
+
+/* TIMELINE */
+.timeline::before {
+  background: var(--border);
+}
+
+.exp-dot {
+  background: var(--accent);
+}
+
+.exp-role {
+  color: var(--text-main);
+}
+
+.exp-company,
+.exp-date,
+.exp-details li {
+  color: var(--text-muted);
+}
+
+/* CTA */
+.cta-section {
+  background: var(--bg-card);
+}
+
+.cta-section p {
+  color: var(--text-muted);
+}
+
+.social-btn {
+  background: #020617;
+  border: 1px solid var(--border);
+}
+.social-btn:hover {
+  background: var(--accent);
+  color: #020617;
 }
 
 /* FOOTER */
 footer {
-  text-align: center;
-  padding: 30px;
-  font-size: 14px;
-  color: #64748b;
+  background: transparent;
+  color: var(--text-muted);
 }
