@@ -1,72 +1,121 @@
 body {
   margin: 0;
-  font-family: 'Inter', sans-serif;
+  font-family: Inter, Arial, sans-serif;
   background: #020617;
   color: #e5e7eb;
 }
 
+/* HERO */
 .hero {
+  padding: 90px 20px;
   text-align: center;
-  padding: 60px 20px;
 }
-.hero h1 {
-  font-size: 42px;
-}
-.subtitle {
-  color: #94a3b8;
-}
-.btn {
-  margin: 8px;
-  padding: 10px 18px;
-  background: #38bdf8;
-  color: #020617;
-  border-radius: 24px;
-  text-decoration: none;
-}
-.btn.secondary {
-  border: 1px solid #38bdf8;
-  background: transparent;
+
+.badge {
+  background: #0f172a;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
   color: #38bdf8;
 }
 
-.projects-section {
-  max-width: 1100px;
-  margin: 60px auto;
-  padding: 0 20px;
-}
-.projects-section h2 {
-  border-bottom: 2px solid #38bdf8;
-  display: inline-block;
-  margin-bottom: 28px;
+.hero h1 {
+  font-size: 46px;
+  line-height: 1.2;
 }
 
-.projects-grid {
+.hero span {
+  color: #38bdf8;
+}
+
+.hero p {
+  max-width: 600px;
+  margin: 20px auto;
+  color: #94a3b8;
+}
+
+/* BUTTONS */
+.btn {
+  display: inline-block;
+  margin: 10px;
+  padding: 12px 24px;
+  border-radius: 30px;
+  background: #38bdf8;
+  color: #020617;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.btn.secondary {
+  background: transparent;
+  border: 1px solid #38bdf8;
+  color: #38bdf8;
+}
+
+/* SECTIONS */
+.section {
+  max-width: 1100px;
+  margin: 80px auto;
+  padding: 0 20px;
+}
+
+.section h2 {
+  margin-bottom: 30px;
+}
+
+/* FEATURES */
+.features {
   display: grid;
-  gap: 24px;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.feature {
+  background: #0f172a;
+  padding: 20px;
+  border-radius: 14px;
+  text-align: center;
+}
+
+/* PROJECTS */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
 }
 
 .card {
   background: #0f172a;
-  padding: 22px;
-  border-radius: 16px;
+  padding: 25px;
+  border-radius: 18px;
 }
+
 .card h3 {
-  color: #38bdf8;
   margin-top: 0;
+  color: #38bdf8;
 }
+
 .domain {
   font-size: 13px;
   color: #94a3b8;
 }
-.links a {
-  color: #38bdf8;
-  margin-right: 12px;
-  font-weight: bold;
+
+.card ul {
+  padding-left: 18px;
+  color: #cbd5f5;
 }
 
+/* LINKS */
+.links a {
+  margin-right: 15px;
+  color: #38bdf8;
+  text-decoration: none;
+}
+
+/* FOOTER */
 footer {
   text-align: center;
-  padding: 20px;
+  padding: 30px;
+  font-size: 14px;
   color: #64748b;
 }
