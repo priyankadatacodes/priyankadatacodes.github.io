@@ -293,6 +293,79 @@
       .modal-content { width: 95%; padding: 1.5rem; }
       .chatbot-bubble { bottom: 1rem; right: 1rem; padding: 0.75rem 1.25rem; font-size: 0.875rem; }
     }
+   /* ============================= */
+/* PROJECT SECTION – VISUAL ONLY */
+/* ============================= */
+
+/* Project Card Base */
+.project-card {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+/* Gradient top line */
+.project-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  background: linear-gradient(90deg, var(--cerulean), var(--fresh-sky));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.project-card:hover::before {
+  transform: scaleX(1);
+}
+
+/* Hover lift */
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 50px -12px rgba(0, 168, 232, 0.25);
+}
+
+/* Project title hover */
+.project-card h3 {
+  transition: color 0.3s ease;
+}
+
+.project-card:hover h3 {
+  color: var(--fresh-sky);
+}
+
+/* Tech badges polish */
+.project-card span {
+  transition: all 0.3s ease;
+}
+
+.project-card:hover span {
+  background-color: rgba(0, 168, 232, 0.12);
+}
+
+/* Links micro-interaction */
+.project-card a {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.project-card a::after {
+  content: ' →';
+  transition: transform 0.3s ease;
+}
+
+.project-card a:hover::after {
+  transform: translateX(4px);
+}
+
+/* Dark mode safety */
+body.dark-mode .project-card:hover {
+  box-shadow: 0 25px 50px -12px rgba(0, 168, 232, 0.35);
+}
+
   </style>
   <style>@view-transition { navigation: auto; }</style>
  </head>
