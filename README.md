@@ -45,6 +45,7 @@ My work covers the complete analytics lifecycle — **data cleaning, SQL analysi
 
 | Project | Business Focus | Tools | Repository |
 |------|---------------|------|-----------|
+| **AI Search & Zero-Click Impact on E-commerce Performance** | AI search impact, zero-click behavior, funnel leakage, revenue optimization | SQL, Python, Tableau | https://github.com/priyankadatacodes/ai-search-zero-click-ecommerce-analysis |
 | E-Commerce Funnel & Revenue Leakage Analysis | Funnel conversion, revenue loss, delivery & seller performance | Python, SQL, Tableau | https://github.com/priyankadatacodes/ecommerce-funnel-revenue-analysis |
 | Customer RFM Analysis | Customer segmentation & retention strategy | SQL, Python, Power BI | https://github.com/priyankadatacodes/customer-rfm-analysis |
 | Telco Customer Churn Analysis | Churn drivers & retention insights | MySQL, Python, Power BI | https://github.com/priyankadatacodes/telco-customer-churn-analysis |
@@ -56,15 +57,18 @@ My work covers the complete analytics lifecycle — **data cleaning, SQL analysi
 | Twitter Sentiment Analysis | Sentiment & text analysis | Python, NLP | https://github.com/priyankadatacodes/Twitter-Sentiment-Analysis |
 | Google Trends Forecasting | Demand forecasting | Python, Time Series | https://github.com/priyankadatacodes/google-trends-time-series-forecasting |
 
+
 ---
 
 ## 📊 Business Dashboards
 
 | Dashboard | Tool | Link |
 |--------|------|------|
+| **AI Search & Zero-Click E-commerce Dashboard** | Tableau | https://github.com/priyankadatacodes/ai-search-zero-click-ecommerce-analysis |
 | Superstore Sales Dashboard | Power BI | https://github.com/priyankadatacodes/superstore-sales-analysis-powerbi |
 | Shopping Trend Dashboard | Power BI | https://github.com/priyankadatacodes/shopping-trend-analysis-powerbi |
 | Telco Customer Churn Dashboard | Power BI | https://github.com/priyankadatacodes/telco-customer-churn-analysis |
+
 
 ---
 
