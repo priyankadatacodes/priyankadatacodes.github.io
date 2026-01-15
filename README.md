@@ -48,6 +48,7 @@ I enjoy transforming raw data into clear, actionable insights that support decis
 | Project | Business Problem Solved | Tools | Repository |
 |----------|--------------------------|--------|-------------|
 | **AI Search & Zero-Click Impact on E-commerce Performance** | Zero-click behavior analysis, funnel leakage, revenue optimization | SQL, Python, Tableau | [View Repo](https://github.com/priyankadatacodes/ai-search-zero-click-ecommerce-analysis) |
+| **GA4 Ecommerce Conversion & Revenue Analysis** | Conversion drop-offs, checkout friction, traffic quality & revenue optimization | SQL (BigQuery), GA4 | [View Repo](https://github.com/priyankadatacodes/ga4-bigquery-ecommerce-analysis) |
 | **E-Commerce Funnel & Revenue Leakage Analysis** | Conversion drop-offs, delivery & seller performance issues | Python, SQL, Tableau | [View Repo](https://github.com/priyankadatacodes/ecommerce-funnel-revenue-analysis) |
 | **Customer RFM Analysis** | Customer segmentation & retention strategy | SQL, Python, Power BI | [View Repo](https://github.com/priyankadatacodes/customer-rfm-analysis) |
 | **Telco Customer Churn Analysis** | Identifying churn drivers & retention insights | MySQL, Python, Power BI | [View Repo](https://github.com/priyankadatacodes/telco-customer-churn-analysis) |
