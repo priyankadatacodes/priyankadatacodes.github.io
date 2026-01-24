@@ -456,6 +456,36 @@
 
   </div>
 </section>
+  </section>
+     </div>
+  </section>
+  
+  <!-- ✅ YAHI ADD KARNA HAI (FILTER JS) -->
+  <script>
+    const buttons = document.querySelectorAll(".filter-btn");
+    const cards = document.querySelectorAll(".project-card");
+
+    buttons.forEach(button => {
+      button.addEventListener("click", () => {
+
+        buttons.forEach(btn => btn.classList.remove("active"));
+        button.classList.add("active");
+
+        const filter = button.dataset.filter;
+
+        cards.forEach(card => {
+          if (filter === "all" || card.classList.contains(filter)) {
+            card.style.display = "flex";
+          } else {
+            card.style.display = "none";
+          }
+        });
+
+      });
+    });
+  </script>
+  <!-- ✅ JS ENDS HERE -->
+  
 <section id="certifications" class="py-24 px-6 bg-white">
   <div class="max-w-6xl mx-auto">
 
