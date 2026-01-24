@@ -184,6 +184,14 @@
   </div>
 </section>
 
+<!-- FILTER BUTTONS -->
+<div class="flex flex-wrap gap-3 justify-center mb-12">
+  <button class="filter-btn active" data-filter="all">All Projects</button>
+  <button class="filter-btn" data-filter="product">Product & Growth</button>
+  <button class="filter-btn" data-filter="energy">Energy</button>
+  <button class="filter-btn" data-filter="customer">Customer</button>
+  <button class="filter-btn" data-filter="people">People / HR</button>
+</div>
 
   <section id="projects" class="py-24 px-6 bg-white">
   <div class="max-w-7xl mx-auto">
@@ -191,16 +199,16 @@
     <h2 class="text-4xl font-bold text-center mb-16">
       Data Analytics <span class="gradient-text">Projects</span>
     </h2>
-
-    <!-- FEATURED PROJECTS -->
+    
+    <!-- ================= PRODUCT / GROWTH ================= -->
     <h3 class="text-xl font-bold mb-8 border-l-4 border-[#00a8e8] pl-3">
-      ⭐ Featured Projects 
+      📈 Product, Growth & Revenue Analytics
     </h3>
 
     <div class="grid md:grid-cols-2 gap-8 mb-20">
 
       <!-- AI SEARCH -->
-      <div class="project-card p-8 bg-white flex flex-col">
+      <div class="project-card product p-8 bg-white flex flex-col">
         <div class="flex gap-2 mb-4">
           <span class="px-2 py-1 bg-blue-50 text-[#007ea7] text-[10px] font-bold rounded">SQL</span>
           <span class="px-2 py-1 bg-blue-50 text-[#007ea7] text-[10px] font-bold rounded">PYTHON</span>
@@ -212,8 +220,8 @@
         </h3>
 
         <p class="text-gray-600 text-sm mb-6">
-          Business-focused analysis of AI-powered search and zero-click behavior to identify
-          funnel leakage, conversion impact, and revenue optimization opportunities.
+          Analysis of AI-powered search behavior to identify zero-click patterns,
+          funnel leakage, and revenue optimization opportunities.
         </p>
 
         <div class="flex gap-4 mt-auto">
@@ -225,7 +233,7 @@
       </div>
 
       <!-- ECOMMERCE FUNNEL -->
-      <div class="project-card p-8 bg-white flex flex-col">
+      <div class="project-card product p-8 bg-white flex flex-col">
         <div class="flex gap-2 mb-4">
           <span class="px-2 py-1 bg-blue-50 text-[#007ea7] text-[10px] font-bold rounded">SQL</span>
           <span class="px-2 py-1 bg-blue-50 text-[#007ea7] text-[10px] font-bold rounded">PYTHON</span>
@@ -237,8 +245,8 @@
         </h3>
 
         <p class="text-gray-600 text-sm mb-6">
-          End-to-end funnel analysis covering conversion rates, delivery delays,
-          seller performance, and revenue leakage.
+          End-to-end funnel analysis covering conversion drop-offs,
+          delivery delays, seller performance, and revenue leakage.
         </p>
 
         <div class="flex gap-4 mt-auto">
@@ -249,170 +257,157 @@
         </div>
       </div>
 
-    </div>
-    
-    <!-- DIGITAL PAYMENTS + GA4 -->
-<div class="grid md:grid-cols-2 gap-8 mb-20">
+      <!-- GA4 -->
+      <div class="project-card product p-8 bg-white flex flex-col">
+        <div class="flex gap-2 mb-4">
+          <span class="px-2 py-1 bg-blue-50 text-[#007ea7] text-[10px] font-bold rounded">GA4</span>
+          <span class="px-2 py-1 bg-blue-50 text-[#007ea7] text-[10px] font-bold rounded">BIGQUERY</span>
+          <span class="px-2 py-1 bg-blue-50 text-[#007ea7] text-[10px] font-bold rounded">SQL</span>
+        </div>
 
-  <!-- DIGITAL PAYMENTS (UPI) -->
-  <div class="project-card p-8 bg-white flex flex-col">
-    <div class="flex gap-2 mb-4">
-      <span class="px-2 py-1 bg-blue-50 text-[#007ea7] text-[10px] font-bold rounded">SQL</span>
-      <span class="px-2 py-1 bg-blue-50 text-[#007ea7] text-[10px] font-bold rounded">PYTHON</span>
-      <span class="px-2 py-1 bg-blue-50 text-[#007ea7] text-[10px] font-bold rounded">TABLEAU</span>
-    </div>
+        <h3 class="text-xl font-bold text-[#003459] mb-3">
+          GA4 Ecommerce Conversion & Revenue Analysis
+        </h3>
 
-    <h3 class="text-xl font-bold text-[#003459] mb-3">
-      Digital Payments (UPI) Growth & Adoption Analysis
-    </h3>
+        <p class="text-gray-600 text-sm mb-6">
+          Event-level GA4 analysis to identify checkout friction,
+          conversion drop-offs, and revenue optimization opportunities.
+        </p>
 
-    <p class="text-gray-600 text-sm mb-6">
-      End-to-end analysis of UPI transaction data covering payment growth,
-      usage behavior, bank adoption, and seasonal trends.
-    </p>
+        <div class="flex gap-4 mt-auto">
+          <a href="https://github.com/priyankadatacodes/ga4-bigquery-ecommerce-analysis"
+             target="_blank" class="text-[#007ea7] font-bold">GitHub</a>
+        </div>
+      </div>
 
-    <div class="flex gap-4 mt-auto">
-      <a href="https://github.com/priyankadatacodes/digital-payments-upi-analysis"
-         target="_blank" class="text-[#007ea7] font-bold">GitHub</a>
-      <a href="https://github.com/priyankadatacodes/digital-payments-upi-analysis/blob/main/dashboard/upi_dashboard.png"
-         target="_blank" class="text-[#007ea7] font-bold">View Dashboard</a>
-    </div>
-  </div>
-
-  <!-- GA4 ECOMMERCE CONVERSION -->
-  <div class="project-card p-8 bg-white flex flex-col">
-    <div class="flex gap-2 mb-4">
-      <span class="px-2 py-1 bg-blue-50 text-[#007ea7] text-[10px] font-bold rounded">GA4</span>
-      <span class="px-2 py-1 bg-blue-50 text-[#007ea7] text-[10px] font-bold rounded">BIGQUERY</span>
-      <span class="px-2 py-1 bg-blue-50 text-[#007ea7] text-[10px] font-bold rounded">SQL</span>
     </div>
 
-    <h3 class="text-xl font-bold text-[#003459] mb-3">
-      GA4 Ecommerce Conversion & Revenue Analysis
-    </h3>
-
-    <p class="text-gray-600 text-sm mb-6">
-      Analysis of GA4 event-level data to identify conversion drop-offs,
-      checkout friction, traffic quality gaps, and revenue optimization
-      opportunities across the ecommerce funnel.
-    </p>
-
-    <div class="flex gap-4 mt-auto">
-      <a href="https://github.com/priyankadatacodes/ga4-bigquery-ecommerce-analysis"
-         target="_blank"
-         class="text-[#007ea7] font-bold">
-        GitHub
-      </a>
-    </div>
-  </div>
-
-</div>
-    
-    <!-- CORE PROJECTS -->
+    <!-- ================= ENERGY ================= -->
     <h3 class="text-xl font-bold mb-8 border-l-4 border-[#00a8e8] pl-3">
-      📊 Core Business Analytics Projects
+      🌱 Energy & Sustainability Analytics
     </h3>
 
- <div class="grid md:grid-cols-2 gap-8 mb-20">
+    <div class="grid md:grid-cols-2 gap-8 mb-20">
 
-  <!-- RFM -->
-  <div class="project-card p-8 bg-white flex flex-col">
-    <div class="flex gap-2 mb-4">
-      <span class="px-2 py-1 bg-blue-50 text-[#007ea7] text-[10px] font-bold rounded">SQL</span>
-      <span class="px-2 py-1 bg-blue-50 text-[#007ea7] text-[10px] font-bold rounded">PYTHON</span>
-      <span class="px-2 py-1 bg-blue-50 text-[#007ea7] text-[10px] font-bold rounded">POWER BI</span>
+      <!-- SOLAR -->
+      <div class="project-card energy p-8 bg-white flex flex-col">
+        <div class="flex gap-2 mb-4">
+          <span class="px-2 py-1 bg-blue-50 text-[#007ea7] text-[10px] font-bold rounded">PYTHON</span>
+          <span class="px-2 py-1 bg-blue-50 text-[#007ea7] text-[10px] font-bold rounded">SQL</span>
+          <span class="px-2 py-1 bg-blue-50 text-[#007ea7] text-[10px] font-bold rounded">POWER BI</span>
+        </div>
+
+        <h3 class="text-xl font-bold text-[#003459] mb-3">
+          Solar Plant Performance & Efficiency Analysis
+        </h3>
+
+        <p class="text-gray-600 text-sm mb-6">
+          Operational analytics of solar power plants covering
+          energy generation, efficiency, utilization loss, and degradation trends.
+        </p>
+
+        <div class="flex gap-4 mt-auto">
+          <a href="https://github.com/priyankadatacodes/solar-plant-efficiency-analysis"
+             target="_blank" class="text-[#007ea7] font-bold">GitHub</a>
+          <a href="https://github.com/priyankadatacodes/solar-plant-efficiency-analysis/blob/main/dashboard/solar_dashboard.png"
+             target="_blank" class="text-[#007ea7] font-bold">View Dashboard</a>
+        </div>
+      </div>
+
     </div>
 
-    <h3 class="text-lg font-bold text-[#003459] mb-2">
-      Customer RFM Analysis
+    <!-- ================= CUSTOMER ================= -->
+    <h3 class="text-xl font-bold mb-8 border-l-4 border-[#00a8e8] pl-3">
+      👥 Customer & Business Analytics
     </h3>
 
-    <p class="text-gray-600 text-sm mb-4">
-      Segmented customers into high-value, loyal, and at-risk groups using
-      RFM metrics to support retention strategies.
-    </p>
+    <div class="grid md:grid-cols-2 gap-8 mb-20">
 
-    <div class="flex gap-4 mt-auto">
-      <a href="https://github.com/priyankadatacodes/customer-rfm-analysis"
-         target="_blank"
-         class="text-[#007ea7] font-bold">
-        GitHub
-      </a>
+      <!-- UPI -->
+      <div class="project-card customer p-8 bg-white flex flex-col">
+        <div class="flex gap-2 mb-4">
+          <span class="px-2 py-1 bg-blue-50 text-[#007ea7] text-[10px] font-bold rounded">SQL</span>
+          <span class="px-2 py-1 bg-blue-50 text-[#007ea7] text-[10px] font-bold rounded">PYTHON</span>
+          <span class="px-2 py-1 bg-blue-50 text-[#007ea7] text-[10px] font-bold rounded">TABLEAU</span>
+        </div>
 
-      <a href="https://github.com/priyankadatacodes/customer-rfm-analysis/blob/main/dashboard/rfm_analysis_dashboard.png"
-         target="_blank"
-         class="text-[#007ea7] font-bold">
-        View Dashboard
-      </a>
+        <h3 class="text-xl font-bold text-[#003459] mb-3">
+          Digital Payments (UPI) Growth & Adoption Analysis
+        </h3>
+
+        <p class="text-gray-600 text-sm mb-6">
+          Analysis of UPI transaction growth, adoption trends,
+          bank participation, and seasonal behavior.
+        </p>
+
+        <div class="flex gap-4 mt-auto">
+          <a href="https://github.com/priyankadatacodes/digital-payments-upi-analysis"
+             target="_blank" class="text-[#007ea7] font-bold">GitHub</a>
+          <a href="https://github.com/priyankadatacodes/digital-payments-upi-analysis/blob/main/dashboard/upi_dashboard.png"
+             target="_blank" class="text-[#007ea7] font-bold">View Dashboard</a>
+        </div>
+      </div>
+
+      <!-- TELCO -->
+      <div class="project-card customer p-8 bg-white flex flex-col">
+        <div class="flex gap-2 mb-4">
+          <span class="px-2 py-1 bg-blue-50 text-[#007ea7] text-[10px] font-bold rounded">MYSQL</span>
+          <span class="px-2 py-1 bg-blue-50 text-[#007ea7] text-[10px] font-bold rounded">PYTHON</span>
+          <span class="px-2 py-1 bg-blue-50 text-[#007ea7] text-[10px] font-bold rounded">POWER BI</span>
+        </div>
+
+        <h3 class="text-xl font-bold text-[#003459] mb-3">
+          Telecom Customer Churn Analysis
+        </h3>
+
+        <p class="text-gray-600 text-sm mb-6">
+          Identified churn drivers using customer usage,
+          tenure, and contract behavior.
+        </p>
+
+        <div class="flex gap-4 mt-auto">
+          <a href="https://github.com/priyankadatacodes/telco-customer-churn-analysis"
+             target="_blank" class="text-[#007ea7] font-bold">GitHub</a>
+          <a href="https://github.com/priyankadatacodes/telco-customer-churn-analysis/blob/main/dashboard/telecom_churn_analysis_dashboard.png"
+             target="_blank" class="text-[#007ea7] font-bold">View Dashboard</a>
+        </div>
+      </div>
+
     </div>
-  </div>
 
-  <!-- TELCO -->
-  <div class="project-card p-8 bg-white flex flex-col">
-    <div class="flex gap-2 mb-4">
-      <span class="px-2 py-1 bg-blue-50 text-[#007ea7] text-[10px] font-bold rounded">MYSQL</span>
-      <span class="px-2 py-1 bg-blue-50 text-[#007ea7] text-[10px] font-bold rounded">PYTHON</span>
-      <span class="px-2 py-1 bg-blue-50 text-[#007ea7] text-[10px] font-bold rounded">POWER BI</span>
-    </div>
-
-    <h3 class="text-lg font-bold text-[#003459] mb-2">
-      Telecom Customer Churn Analysis
+    <!-- ================= PEOPLE ================= -->
+    <h3 class="text-xl font-bold mb-8 border-l-4 border-[#00a8e8] pl-3">
+      🧑‍💼 People & Operations Analytics
     </h3>
 
-    <p class="text-gray-600 text-sm mb-4">
-      Identified churn drivers using customer usage and contract behavior.
-    </p>
+    <div class="grid md:grid-cols-2 gap-8 mb-20">
 
-    <div class="flex gap-4 mt-auto">
-      <a href="https://github.com/priyankadatacodes/telco-customer-churn-analysis"
-         target="_blank"
-         class="text-[#007ea7] font-bold">
-        GitHub
-      </a>
+      <!-- HR -->
+      <div class="project-card people p-8 bg-white flex flex-col">
+        <div class="flex gap-2 mb-4">
+          <span class="px-2 py-1 bg-blue-50 text-[#007ea7] text-[10px] font-bold rounded">SQL</span>
+          <span class="px-2 py-1 bg-blue-50 text-[#007ea7] text-[10px] font-bold rounded">PYTHON</span>
+          <span class="px-2 py-1 bg-blue-50 text-[#007ea7] text-[10px] font-bold rounded">POWER BI</span>
+        </div>
 
-      <a href="https://github.com/priyankadatacodes/telco-customer-churn-analysis/blob/main/dashboard/telecom_churn_analysis_dashboard.png"
-         target="_blank"
-         class="text-[#007ea7] font-bold">
-        View Dashboard
-      </a>
+        <h3 class="text-xl font-bold text-[#003459] mb-3">
+          HR Employee Attrition Analysis
+        </h3>
+
+        <p class="text-gray-600 text-sm mb-6">
+          Analysis of employee attrition trends across role,
+          experience, compensation, and work-life balance.
+        </p>
+
+        <div class="flex gap-4 mt-auto">
+          <a href="https://github.com/priyankadatacodes/hr-employee-attrition-analysis"
+             target="_blank" class="text-[#007ea7] font-bold">GitHub</a>
+          <a href="https://github.com/priyankadatacodes/hr-employee-attrition-analysis/blob/main/dashboard/employee_attrition_dashboard_image.png"
+             target="_blank" class="text-[#007ea7] font-bold">View Dashboard</a>
+        </div>
+      </div>
+
     </div>
-  </div>
-
-</div>
-
- <!-- HR ATTRITION -->
-  <div class="project-card p-8 bg-white flex flex-col">
-    <div class="flex gap-2 mb-4">
-      <span class="px-2 py-1 bg-blue-50 text-[#007ea7] text-[10px] font-bold rounded">SQL</span>
-      <span class="px-2 py-1 bg-blue-50 text-[#007ea7] text-[10px] font-bold rounded">PYTHON</span>
-      <span class="px-2 py-1 bg-blue-50 text-[#007ea7] text-[10px] font-bold rounded">POWER BI</span>
-    </div>
-
-    <h3 class="text-lg font-bold text-[#003459] mb-2">
-      HR Employee Attrition Analysis
-    </h3>
-
-    <p class="text-gray-600 text-sm mb-4">
-      Analyzed employee attrition trends to identify key drivers such as role,
-      experience, compensation, and work-life balance for HR retention planning.
-    </p>
-
-    <div class="flex gap-4 mt-auto">
-      <a href="https://github.com/priyankadatacodes/hr-employee-attrition-analysis"
-         target="_blank"
-         class="text-[#007ea7] font-bold">
-        GitHub
-      </a>
-
-      <a href="https://github.com/priyankadatacodes/hr-employee-attrition-analysis/blob/main/dashboard/employee_attrition_dashboard_image.png"
-         target="_blank"
-         class="text-[#007ea7] font-bold">
-        View Dashboard
-      </a>
-    </div>
-  </div>
-
-</div>
 
   </div>
 </section>
