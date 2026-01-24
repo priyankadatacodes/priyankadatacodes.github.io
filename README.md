@@ -1,115 +1,119 @@
-# 👋 Hi, I’m Priyanka Lakra
+# 👋 Hi, I’m Priyanka Lakra  
 
-### 💻 Data Analyst | SQL • Python • Power BI • Excel • Tableau
+### 💻 Data Analyst | SQL • Python • Power BI • Excel • Tableau  
 
-I am a **Data Analyst** with strong hands-on experience in end-to-end data analysis, focused on solving real-world business problems using data.
+I work on **business-focused data analytics projects**, turning raw data into **KPIs, dashboards, and insights** that support decision-making for business, product, and operations teams.
 
-My work spans the complete analytics lifecycle — **data cleaning, SQL-based analysis, KPI design, dashboard development**, and **insight-driven business recommendations**.  
-I enjoy transforming raw data into clear, actionable insights that support decision-making across business, operations, and growth teams.
-
-🐙 **GitHub:** [priyankadatacodes](https://github.com/priyankadatacodes)  
-📊 **Kaggle:** [priyankalakraxdata](https://www.kaggle.com/priyankalakraxdata)
-
----
-
-## 🔑 Core Data Analyst Skill Set
-
-### 🧠 Programming & Data Analysis
-- Python (Pandas, NumPy)
-- SQL (MySQL)
-- Data Cleaning & Validation
-- Exploratory Data Analysis (EDA)
-
-### 📊 Business Intelligence & Visualization
-- Power BI (DAX, KPI Dashboards)
-- Tableau (Interactive Dashboards)
-- Advanced Excel (Pivot Tables, Reporting)
-- Matplotlib & Seaborn
-
-### 📈 Analytics & Business Concepts
-- Funnel & Conversion Analysis  
-- Revenue & Profitability Analysis  
-- KPI Design & Performance Tracking  
-- Customer Churn & Retention Analysis  
-- Customer Segmentation (RFM)  
-- Operational, Seller & Performance Analytics  
-
-### ⚙️ Tools & Workflow
-- Jupyter Notebook  
-- VS Code  
-- GitHub  
-- Kaggle  
-- SQLAlchemy  
+🔍 If you’re a recruiter or hiring manager, this page will help you quickly see:
+- What problems I can solve with data  
+- The kind of projects I’ve worked on  
+- Where to explore my work next  
 
 ---
 
-## 🚀 End-to-End Data Analytics Projects (Primary Focus)
+## 🔗 Quick Navigation (Start Here)
 
-| Project | Business Problem Solved | Tools | Repository |
-|----------|--------------------------|--------|-------------|
-| **Digital Payments (UPI) Analysis** | Growth, adoption & trends | Python, SQL, Tableau |  [View Repo](https://github.com/priyankadatacodes/digital-payments-upi-analysis) |
-| **AI Search & Zero-Click Impact on E-commerce Performance** | Zero-click behavior analysis, funnel leakage, revenue optimization | SQL, Python, Tableau | [View Repo](https://github.com/priyankadatacodes/ai-search-zero-click-ecommerce-analysis) |
-| **GA4 Ecommerce Conversion & Revenue Analysis** | Conversion drop-offs, checkout friction, traffic quality & revenue optimization | SQL (BigQuery), GA4 | [View Repo](https://github.com/priyankadatacodes/ga4-bigquery-ecommerce-analysis) |
-| **E-Commerce Funnel & Revenue Leakage Analysis** | Conversion drop-offs, delivery & seller performance issues | Python, SQL, Tableau | [View Repo](https://github.com/priyankadatacodes/ecommerce-funnel-revenue-analysis) |
-| **Customer RFM Analysis** | Customer segmentation & retention strategy | SQL, Python, Power BI | [View Repo](https://github.com/priyankadatacodes/customer-rfm-analysis) |
-| **Telco Customer Churn Analysis** | Identifying churn drivers & retention insights | MySQL, Python, Power BI | [View Repo](https://github.com/priyankadatacodes/telco-customer-churn-analysis) |
-| **HR Employee Attrition Analysis** | Workforce attrition trends & risk factors | SQL, Python, EDA | [View Repo](https://github.com/priyankadatacodes/hr-employee-attrition-analysis) |
-| **Superstore Sales Performance Analysis** | Sales, profit & category performance tracking | Python, EDA | [View Repo](https://github.com/priyankadatacodes/superstore-sales-performance-analysis) |
-| **World Happiness Report Analysis (2025)** | Socio-economic trend analysis | Python, SQL | [View Repo](https://github.com/priyankadatacodes/world-happiness-report-2025-analysis) |
+- ⭐ **Best Projects:** [Featured Analytics Projects](#-featured-end-to-end-data-analytics-projects)  
+- 📊 **Dashboards:** [Business Dashboards](#-business-dashboards)  
+- 🧠 **Kaggle Practice:** [Kaggle Profile](#-kaggle-profile)  
+- 🤝 **Connect:** [LinkedIn](#-connect-with-me)  
 
 ---
 
-## 📌 Additional Analytical & ML Projects (Supporting Experience)
+## 🔑 Core Data Analyst Skills (At a Glance)
 
-These projects strengthened my **analytical thinking**, **data handling**, and **problem-solving** skills.  
-My primary career focus is **Data Analyst / Business Analyst** roles.
+### 🧠 Programming & Analysis
+- Python (Pandas, NumPy)  
+- SQL (MySQL, BigQuery)  
+- Data Cleaning & Validation  
+- Exploratory Data Analysis (EDA)  
 
-| Project | Focus Area | Tools | Repository |
-|----------|-------------|--------|-------------|
-| **Credit Card Fraud Analysis** | Fraud risk identification | Python, ML | [View Repo](https://github.com/priyankadatacodes/credit-card-fraud-analysis) |
-| **Product Recommendation System** | Recommendation logic & user behavior | Python, ML | [View Repo](https://github.com/priyankadatacodes/ecommerce-product-recommendation) |
-| **Twitter Sentiment Analysis** | Text & sentiment analysis | Python, NLP | [View Repo](https://github.com/priyankadatacodes/Twitter-Sentiment-Analysis) |
-| **Google Trends Forecasting** | Demand trend forecasting | Python, Time Series | [View Repo](https://github.com/priyankadatacodes/google-trends-time-series-forecasting) |
+### 📊 BI & Reporting
+- Power BI (DAX, KPI dashboards)  
+- Tableau (interactive dashboards)  
+- Excel (pivot tables, reporting)  
+
+### 📈 Business Analytics
+- Funnel & conversion analysis  
+- Revenue & profitability analysis  
+- KPI design & performance tracking  
+- Customer churn & retention analysis  
+- Customer segmentation (RFM)  
+- Operational & performance analytics  
+
+---
+
+## 🚀 Featured End-to-End Data Analytics Projects
+
+> These projects best represent my **real-world analytics experience**.  
+> If you open only a few, start from the top 👇
+
+| Project | Business Problem Solved | Tools | Link |
+|--------|------------------------|-------|------|
+| **AI Search & Zero-Click Impact on E-commerce Performance** | Funnel leakage, zero-click behavior, revenue optimization | SQL, Python, Tableau | [View Repo](https://github.com/priyankadatacodes/ai-search-zero-click-ecommerce-analysis) |
+| **GA4 Ecommerce Conversion & Revenue Analysis** | Conversion drop-offs, checkout friction, traffic quality | SQL (BigQuery), GA4 | [View Repo](https://github.com/priyankadatacodes/ga4-bigquery-ecommerce-analysis) |
+| **E-Commerce Funnel & Revenue Leakage Analysis** | Funnel drop-offs, delivery & seller performance issues | Python, SQL, Tableau | [View Repo](https://github.com/priyankadatacodes/ecommerce-funnel-revenue-analysis) |
+| **Digital Payments (UPI) Growth & Adoption Analysis** | Transaction growth & adoption trends | Python, SQL, Tableau | [View Repo](https://github.com/priyankadatacodes/digital-payments-upi-analysis) |
+| **Solar Plant Performance & Efficiency Analysis** | Energy generation, efficiency & system-level loss analysis | Python, SQL, Power BI | [View Repo](https://github.com/priyankadatacodes/solar-plant-efficiency-analysis) |
 
 ---
 
 ## 📊 Business Dashboards
 
+These dashboards show how analysis is converted into **clear, decision-ready visuals**.
+
 | Dashboard | Tool | Link |
-|------------|------|------|
+|----------|------|------|
 | **AI Search & Zero-Click E-commerce Dashboard** | Tableau | [View Dashboard](https://github.com/priyankadatacodes/ai-search-zero-click-ecommerce-analysis) |
-| **Superstore Sales Dashboard** | Power BI | [View Dashboard](https://github.com/priyankadatacodes/superstore-sales-analysis-powerbi) |
-| **Shopping Trend Dashboard** | Power BI | [View Dashboard](https://github.com/priyankadatacodes/shopping-trend-analysis-powerbi) |
 | **Telco Customer Churn Dashboard** | Power BI | [View Dashboard](https://github.com/priyankadatacodes/telco-customer-churn-analysis) |
+| **Superstore Sales Dashboard** | Power BI | [View Dashboard](https://github.com/priyankadatacodes/superstore-sales-analysis-powerbi) |
 
 ---
 
-## 📘 Kaggle Projects & Notebooks
+## 🧠 Kaggle Profile
+
+I actively practice data analysis on Kaggle using real-world datasets, focusing on **EDA, trend analysis, and storytelling**.
+
+🔗 **Kaggle:**  
+https://www.kaggle.com/priyankalakraxdata  
+
+---
+
+## 📘 Selected Kaggle Notebooks
 
 | Notebook | Focus Area | Tools | Link |
-|-----------|-------------|--------|------|
-| **Social Media Content Performance & Engagement Analysis** | Engagement & performance analytics | Python, EDA, Visualization | [View Notebook](https://www.kaggle.com/code/priyankalakraxdata/social-media-content-performance-engagement-da) |
-| **Global Energy Consumption Analysis & Forecasting** | Energy trends & forecasting | Python, Time Series | [View Notebook](https://www.kaggle.com/code/priyankalakraxdata/global-energy-consumption-analysis-forecast/notebook) |
+|---------|------------|-------|------|
+| **Social Media Content Performance Analysis** | Engagement & performance analytics | Python, EDA | [View](https://www.kaggle.com/code/priyankalakraxdata/social-media-content-performance-engagement-da) |
+| **Global Energy Consumption Analysis & Forecasting** | Energy trends & forecasting | Python, Time Series | [View](https://www.kaggle.com/code/priyankalakraxdata/global-energy-consumption-analysis-forecast/notebook) |
+
+---
+
+## 📌 Additional Projects (Supporting Experience)
+
+These projects strengthen my analytical foundation and problem-solving skills.
+
+- Credit Card Fraud Analysis (Python, ML)  
+- Google Trends Forecasting (Python, Time Series)  
+- Product Recommendation System (Python, ML)  
 
 ---
 
 ## 💼 What Recruiters Will Find Here
 
-- Business-driven, real-world data analytics projects  
-- Strong foundation in SQL, Python, Excel, Power BI & Tableau  
-- KPI-focused dashboards and analytical reporting  
-- End-to-end analytics workflow (**data → insight → recommendation**)  
-- Clean, structured, and well-documented repositories  
-- Ready-to-explain projects with clear **problem → analysis → insight → impact** flow  
+- Business-driven data analytics projects  
+- Strong SQL, Python, Power BI & Tableau usage  
+- KPI-focused dashboards  
+- End-to-end analytics workflow (data → insight → recommendation)  
+- Clean, explainable repositories  
 
 ---
 
 ## 🔗 Connect With Me
 
-- **GitHub:** [priyankadatacodes](https://github.com/priyankadatacodes)  
-- **Kaggle:** [priyankalakraxdata](https://www.kaggle.com/priyankalakraxdata)  
-- **LinkedIn:** [priyankalakra006](https://www.linkedin.com/in/priyankalakra006/)  
+- **GitHub:** https://github.com/priyankadatacodes  
+- **LinkedIn:** https://www.linkedin.com/in/priyankalakra006/  
+- **Kaggle:** https://www.kaggle.com/priyankalakraxdata  
 
 ---
 
-📚 *This repository serves as a central portfolio hub showcasing my Data Analytics projects, dashboards, and applied business analysis work.*
+📌 *This GitHub profile acts as my central analytics portfolio, designed to help recruiters quickly understand my skills, thinking, and real-world readiness.*
