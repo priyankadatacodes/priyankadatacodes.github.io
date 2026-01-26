@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Telecom Customer Churn Analysis | Priyanka Lakra</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Same stack as original portfolio -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body { font-family: 'Poppins', sans-serif; }
+  </style>
+</head>
+
+<body class="bg-white text-[#00171f]">
+
+<!-- ================= HEADER ================= -->
+<section class="py-20 px-6 bg-[#00171f] text-white">
+  <div class="max-w-5xl mx-auto">
+    <h1 class="text-4xl md:text-5xl font-bold mb-4">
+      Telecom <span class="text-[#00a8e8]">Customer Churn</span> Analysis
+    </h1>
+    <p class="text-lg text-gray-300">
+      End-to-end churn analysis and prediction using SQL, Python, and Power BI
+    </p>
+  </div>
+</section>
+
+<!-- ================= BACK TO PORTFOLIO ================= -->
+<section class="px-6 py-6 bg-white">
+  <div class="max-w-5xl mx-auto">
+    <a href="../priyanka-portfolio.html"
+       class="text-[#007ea7] font-semibold hover:underline">
+      ← Back to Portfolio
+    </a>
+  </div>
+</section>
+
+<!-- ================= CONTENT ================= -->
+<section class="py-20 px-6">
+  <div class="max-w-5xl mx-auto space-y-16">
+
+    <!-- EXECUTIVE SUMMARY -->
+    <div>
+      <h2 class="text-2xl font-bold text-[#003459] mb-4">Executive Summary</h2>
+      <p class="text-gray-700 leading-relaxed">
+        This project analyzes customer churn in the telecommunications industry to identify high-risk
+        customers, understand key churn drivers, and support data-driven retention strategies.
+        The company is experiencing a churn rate of ~26.6%, which poses a significant risk to
+        long-term revenue. Using SQL, Python, and Power BI, the analysis highlights churn patterns
+        and customers most likely to leave.
+      </p>
+    </div>
+
+    <!-- WHY I BUILT THIS -->
+    <div>
+      <h2 class="text-2xl font-bold text-[#003459] mb-4">Why I Built This Project</h2>
+      <p class="text-gray-700">
+        Customer churn is one of the most expensive problems in subscription-based businesses.
+        Acquiring new customers costs significantly more than retaining existing ones.
+        This project mirrors a real-world scenario where a data analyst supports revenue and
+        retention decisions using both descriptive and predictive analytics.
+      </p>
+    </div>
+
+    <!-- BUSINESS CONTEXT -->
+    <div>
+      <h2 class="text-2xl font-bold text-[#003459] mb-4">Business Context</h2>
+      <ul class="list-disc pl-6 text-gray-700 space-y-2">
+        <li>Telecom companies rely on recurring monthly revenue.</li>
+        <li>High competition and low switching costs increase churn risk.</li>
+        <li>High churn leads to revenue loss and increased acquisition costs.</li>
+        <li>Early identification of churn risk enables proactive retention.</li>
+      </ul>
+    </div>
+
+    <!-- PROBLEM STATEMENT -->
+    <div>
+      <h2 class="text-2xl font-bold text-[#003459] mb-4">Problem Statement</h2>
+      <p class="text-gray-700">
+        Analyze telecom customer data to measure churn, identify key churn drivers,
+        predict high-risk customers, and support targeted retention strategies with
+        maximum business impact.
+      </p>
+    </div>
+
+    <!-- DATASET -->
+    <div>
+      <h2 class="text-2xl font-bold text-[#003459] mb-4">Dataset Overview</h2>
+      <p class="text-gray-700">
+        Telecom customer dataset containing 7,043 records with customer demographics,
+        service usage, contract details, tenure, billing information, and churn status.
+      </p>
+    </div>
+
+    <!-- TOOLS -->
+    <div>
+      <h2 class="text-2xl font-bold text-[#003459] mb-4">Tools Used</h2>
+      <p class="text-gray-700">
+        SQL (MySQL) · Python (Pandas, Scikit-learn) · Power BI · Jupyter Notebook
+      </p>
+    </div>
+
+    <!-- ANALYSIS APPROACH -->
+    <div>
+      <h2 class="text-2xl font-bold text-[#003459] mb-4">Analysis Approach</h2>
+      <ul class="list-disc pl-6 text-gray-700 space-y-2">
+        <li>Imported and stored raw data in MySQL</li>
+        <li>Performed data cleaning and EDA using Python</li>
+        <li>Identified churn drivers through statistical analysis</li>
+        <li>Built Logistic Regression and Random Forest models</li>
+        <li>Created Power BI dashboards for business reporting</li>
+      </ul>
+    </div>
+
+    <!-- KPIs -->
+    <div>
+      <h2 class="text-2xl font-bold text-[#003459] mb-4">Key KPIs Tracked</h2>
+      <ul class="list-disc pl-6 text-gray-700 space-y-2">
+        <li>Total Customers</li>
+        <li>Churn Rate (%)</li>
+        <li>Retained vs Churned Customers</li>
+        <li>Average Tenure (Months)</li>
+        <li>Customer Lifetime Value Indicators</li>
+      </ul>
+    </div>
+
+    <!-- KEY INSIGHTS -->
+    <div>
+      <h2 class="text-2xl font-bold text-[#003459] mb-4">Key Insights</h2>
+      <ul class="list-disc pl-6 text-gray-700 space-y-2">
+        <li>Overall churn rate is ~26.6%.</li>
+        <li>Customers with low tenure are significantly more likely to churn.</li>
+        <li>Higher monthly charges increase churn probability.</li>
+        <li>Month-to-month contracts show higher churn than long-term contracts.</li>
+        <li>~6% of customers are identified as high-risk and should be prioritized.</li>
+      </ul>
+    </div>
+
+    <!-- BUSINESS IMPACT -->
+    <div>
+      <h2 class="text-2xl font-bold text-[#003459] mb-4">Business Impact</h2>
+      <ul class="list-disc pl-6 text-gray-700 space-y-2">
+        <li>Enables proactive churn prevention.</li>
+        <li>Supports targeted retention instead of mass campaigns.</li>
+        <li>Helps protect customer lifetime value.</li>
+        <li>Reduces revenue leakage from early churn.</li>
+      </ul>
+    </div>
+
+    <!-- PROJECT LINKS -->
+    <div>
+      <h2 class="text-2xl font-bold text-[#003459] mb-4">Project Links</h2>
+      <ul class="space-y-3 text-gray-700">
+        <li>
+          🔗 <a href="https://github.com/priyankadatacodes/telco-customer-churn-analysis"
+               target="_blank"
+               class="text-[#007ea7] font-bold hover:underline">
+            GitHub Repository
+          </a>
+        </li>
+        <li>
+          🔗 <a href="https://youtu.be/5TIz0KCj2ro"
+               target="_blank"
+               class="text-[#007ea7] font-bold hover:underline">
+            Dashboard Walkthrough (YouTube)
+          </a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="py-8 bg-[#00171f] text-center text-gray-400 text-sm">
+  © 2026 Priyanka Lakra · Data Analytics Portfolio
+</footer>
+
+</body>
+</html>
