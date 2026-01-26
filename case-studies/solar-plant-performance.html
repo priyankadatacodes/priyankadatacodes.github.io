@@ -4,118 +4,175 @@
   <meta charset="UTF-8">
   <title>Solar Plant Performance & Efficiency Analysis | Priyanka Lakra</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Same stack as original portfolio -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body { font-family: 'Poppins', sans-serif; }
+  </style>
 </head>
 
-<body style="
-  font-family: 'Poppins', Arial, sans-serif;
-  margin: 40px;
-  line-height: 1.7;
-  color: #00171f;
-">
+<body class="bg-white text-[#00171f]">
 
-  <h2>Solar Plant Performance & Efficiency Analysis</h2>
+<!-- ================= HEADER ================= -->
+<section class="py-20 px-6 bg-[#00171f] text-white">
+  <div class="max-w-5xl mx-auto">
+    <h1 class="text-4xl md:text-5xl font-bold mb-4">
+      Solar Plant <span class="text-[#00a8e8]">Performance & Efficiency</span> Analysis
+    </h1>
+    <p class="text-lg text-gray-300">
+      End-to-end analysis of solar plant generation, efficiency, and energy loss using Python, SQL, and Power BI
+    </p>
+  </div>
+</section>
 
-  <p>
-    <strong>Tools:</strong> Python, SQL (MySQL), Power BI
-  </p>
+<!-- ================= BACK TO PORTFOLIO ================= -->
+<section class="px-6 py-6 bg-white">
+  <div class="max-w-5xl mx-auto">
+    <a href="../priyanka-portfolio.html"
+       class="text-[#007ea7] font-semibold hover:underline">
+      ← Back to Portfolio
+    </a>
+  </div>
+</section>
 
-  <p>
-    End-to-end analysis of solar power plant operational data to understand
-    energy generation, efficiency, system-level loss, and inverter performance.
-    This project focuses on turning raw sensor data into clear KPIs and insights
-    that support operational and management decisions.
-  </p>
+<!-- ================= CONTENT ================= -->
+<section class="py-20 px-6">
+  <div class="max-w-5xl mx-auto space-y-16">
 
-  <hr>
+    <!-- EXECUTIVE SUMMARY -->
+    <div>
+      <h2 class="text-2xl font-bold text-[#003459] mb-4">Executive Summary</h2>
+      <p class="text-gray-700 leading-relaxed">
+        This project analyzes solar power plant generation data to understand energy production,
+        system efficiency, and operational energy loss. Python was used for data cleaning,
+        MySQL for data storage, and Power BI for building an executive-level dashboard.
+        The dashboard provides a clear view of plant performance, trends, and underperforming inverters.
+      </p>
+    </div>
 
-  <h3>Why This Project</h3>
-  <p>
-    Solar plants generate large volumes of sensor data every day, but raw data
-    alone is difficult to interpret and not useful for quick decision-making.
-    Operations teams need simple metrics and trends to understand plant health,
-    efficiency, and performance issues.
-  </p>
+    <!-- WHY I BUILT THIS -->
+    <div>
+      <h2 class="text-2xl font-bold text-[#003459] mb-4">Why I Built This Project</h2>
+      <p class="text-gray-700">
+        Solar plants generate large volumes of operational data, but raw data alone is not useful for
+        decision-making. I built this project to practice real-world energy analytics and demonstrate
+        how raw sensor data can be converted into meaningful KPIs and insights for business and operations teams.
+      </p>
+    </div>
 
-  <h3>Business Problem</h3>
-  <ul>
-    <li>How much energy is the plant generating?</li>
-    <li>How efficient is the system overall?</li>
-    <li>Where is energy being lost?</li>
-    <li>Is plant performance degrading over time?</li>
-    <li>Which inverters need attention?</li>
-  </ul>
+    <!-- BUSINESS CONTEXT -->
+    <div>
+      <h2 class="text-2xl font-bold text-[#003459] mb-4">Business Context</h2>
+      <ul class="list-disc pl-6 text-gray-700 space-y-2">
+        <li>How much energy is the plant generating?</li>
+        <li>How efficient is the solar plant overall?</li>
+        <li>How much energy is being lost at the system level?</li>
+        <li>Is plant performance degrading over time?</li>
+        <li>Which inverters require operational attention?</li>
+      </ul>
+    </div>
 
-  <h3>Dataset Overview</h3>
-  <ul>
-    <li>Time-series solar generation and weather data</li>
-    <li>Metrics: DC power, AC power, daily energy yield</li>
-    <li>Weather data: irradiation, ambient temperature, module temperature</li>
-    <li>Inverter-level operational records</li>
-  </ul>
+    <!-- DATASET -->
+    <div>
+      <h2 class="text-2xl font-bold text-[#003459] mb-4">Dataset Overview</h2>
+      <p class="text-gray-700">
+        Time-series solar plant generation and weather data including DC power, AC power,
+        daily energy yield, irradiation, ambient temperature, module temperature,
+        and inverter-level identifiers.
+      </p>
+    </div>
 
-  <h3>Data Preparation</h3>
-  <ul>
-    <li>Loaded generation and weather datasets using Python</li>
-    <li>Converted timestamps into datetime format</li>
-    <li>Removed duplicate and invalid records</li>
-    <li>Filtered non-operational data (DC power &gt; 0 and AC power &gt; 0)</li>
-    <li>Created derived columns required for analysis</li>
-  </ul>
+    <!-- TOOLS -->
+    <div>
+      <h2 class="text-2xl font-bold text-[#003459] mb-4">Tools Used</h2>
+      <p class="text-gray-700">
+        Python · Pandas · NumPy · MySQL · SQLAlchemy · Power BI
+      </p>
+    </div>
 
-  <h3>Analysis Approach</h3>
-  <ul>
-    <li>Cleaned and prepared data using Pandas and NumPy</li>
-    <li>Stored cleaned data in MySQL for structured querying</li>
-    <li>Connected Power BI directly to the database</li>
-    <li>Created DAX measures for KPIs and trends</li>
-    <li>Built a single-page executive dashboard</li>
-  </ul>
+    <!-- DATA PREPARATION -->
+    <div>
+      <h2 class="text-2xl font-bold text-[#003459] mb-4">Data Preparation</h2>
+      <ul class="list-disc pl-6 text-gray-700 space-y-2">
+        <li>Loaded generation and weather datasets</li>
+        <li>Converted timestamps to datetime format</li>
+        <li>Removed duplicates and invalid values</li>
+        <li>Filtered non-operational records (DC > 0 and AC > 0)</li>
+        <li>Stored cleaned data in MySQL for analysis and reporting</li>
+      </ul>
+    </div>
 
-  <h3>Key KPIs Tracked</h3>
-  <ul>
-    <li>Total Energy Generated (kWh)</li>
-    <li>Average Panel Efficiency (%)</li>
-    <li>System Energy Utilization Loss (%)</li>
-    <li>Peak Daily Energy Output (kWh)</li>
-    <li>Average Daily Energy Yield</li>
-  </ul>
+    <!-- KPIs -->
+    <div>
+      <h2 class="text-2xl font-bold text-[#003459] mb-4">Key KPIs Tracked</h2>
+      <ul class="list-disc pl-6 text-gray-700 space-y-2">
+        <li>Total Energy Generated (kWh)</li>
+        <li>Average Panel Efficiency (%)</li>
+        <li>System Energy Utilization Loss (%)</li>
+        <li>Peak Daily Energy Output</li>
+        <li>Average Daily Specific Yield</li>
+      </ul>
+    </div>
 
-  <p>
-    <em>
-      Note: System Energy Utilization Loss represents downtime, curtailment,
-      and non-generation periods, not inverter conversion loss.
-    </em>
-  </p>
+    <!-- KEY INSIGHTS -->
+    <div>
+      <h2 class="text-2xl font-bold text-[#003459] mb-4">Key Insights</h2>
+      <ul class="list-disc pl-6 text-gray-700 space-y-2">
+        <li>A large portion of energy loss comes from non-generating periods and downtime.</li>
+        <li>System-level efficiency remains relatively stable.</li>
+        <li>Monthly AC power trends help identify performance degradation.</li>
+        <li>Some inverters consistently perform below plant average.</li>
+      </ul>
+    </div>
 
-  <h3>Key Insights</h3>
-  <ul>
-    <li>A large portion of energy loss is driven by non-generating periods and downtime</li>
-    <li>Overall system efficiency remains relatively stable across time</li>
-    <li>Monthly AC power trends help identify early degradation patterns</li>
-    <li>Some inverters consistently perform below the plant average</li>
-  </ul>
+    <!-- BUSINESS IMPACT -->
+    <div>
+      <h2 class="text-2xl font-bold text-[#003459] mb-4">Business Impact</h2>
+      <ul class="list-disc pl-6 text-gray-700 space-y-2">
+        <li>Helps operators quickly understand plant performance.</li>
+        <li>Supports early identification of underperforming inverters.</li>
+        <li>Improves maintenance planning and operational decision-making.</li>
+      </ul>
+    </div>
 
-  <h3>Impact</h3>
-  <ul>
-    <li>Converted complex solar sensor data into clear KPIs that are easy to understand</li>
-    <li>Helped teams quickly see where and why energy loss was happening</li>
-    <li>Made it easier to identify underperforming inverters for timely maintenance</li>
-    <li>Enabled tracking of monthly performance trends to catch degradation early</li>
-    <li>Delivered a single-page Power BI dashboard for daily monitoring and reporting</li>
-  </ul>
+    <!-- PROJECT LINKS -->
+    <div>
+      <h2 class="text-2xl font-bold text-[#003459] mb-4">Project Links</h2>
+      <ul class="space-y-3 text-gray-700">
+        <li>
+          🔗 <a href="https://github.com/priyankadatacodes/solar-plant-efficiency-analysis"
+               target="_blank"
+               class="text-[#007ea7] font-bold hover:underline">
+            GitHub Repository
+          </a>
+        </li>
+        <li>
+          🔗 <a href="https://www.kaggle.com/code/gregoryoliveira/solar-power-generation-data/input"
+               target="_blank"
+               class="text-[#007ea7] font-bold hover:underline">
+            Dataset (Kaggle)
+          </a>
+        </li>
+        <li>
+          🔗 <a href="https://youtu.be/uNB0j196MYQ"
+               target="_blank"
+               class="text-[#007ea7] font-bold hover:underline">
+            Dashboard Walkthrough (YouTube)
+          </a>
+        </li>
+      </ul>
+    </div>
 
-  <h3>Final Takeaway</h3>
-  <p>
-    This project shows how solar plant operational data can be transformed into
-    simple, actionable insights. Instead of working with raw data, teams can use
-    clear KPIs and dashboards to monitor performance and support better decisions.
-  </p>
+  </div>
+</section>
 
-  <hr>
-
-  <p>
-    <a href="https://github.com/priyankadatacodes/priyankadatacodes.github.io/blob/main/priyanka-portfolio.html">← Back to Portfolio</a>
-  </p>
+<!-- ================= FOOTER ================= -->
+<footer class="py-8 bg-[#00171f] text-center text-gray-400 text-sm">
+  © 2026 Priyanka Lakra · Data Analytics Portfolio
+</footer>
 
 </body>
 </html>
