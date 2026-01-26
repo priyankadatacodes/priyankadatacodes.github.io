@@ -5,7 +5,7 @@
   <title>Google Trends Time Series Forecasting | Priyanka Lakra</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Same stack as original portfolio -->
+  <!-- Same stack as portfolio -->
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
@@ -23,17 +23,17 @@
       Google Trends <span class="text-[#00a8e8]">Time Series Forecasting</span>
     </h1>
     <p class="text-lg text-gray-300">
-      End-to-end forecasting of search interest using Python, Prophet, and Streamlit
+      End-to-end time series analysis and forecasting using Python, Prophet, and Streamlit
     </p>
   </div>
 </section>
 
-<!-- ================= BACK TO PORTFOLIO ================= -->
+<!-- ================= BACK ================= -->
 <section class="px-6 py-6 bg-white">
   <div class="max-w-5xl mx-auto">
-    <a href="../priyanka-portfolio.html"
-       class="text-[#007ea7] font-semibold hover:underline">
-      ← Back to Portfolio
+    <a href="../priyanka-portfolio.html#projects"
+       class="inline-block text-[#007ea7] font-semibold hover:underline">
+      ← Back to Projects
     </a>
   </div>
 </section>
@@ -46,33 +46,32 @@
     <div>
       <h2 class="text-2xl font-bold text-[#003459] mb-4">Executive Summary</h2>
       <p class="text-gray-700 leading-relaxed">
-        This project performs time series forecasting on Google Trends data to analyze
-        and predict interest patterns for high-demand technology keywords such as
+        This project performs time series forecasting on Google Trends data to analyze and predict
+        future interest patterns for high-demand technology keywords such as
         Data Analytics, Machine Learning, and Artificial Intelligence.
-        Using dynamically fetched Google Trends data and Facebook Prophet,
-        the project forecasts future interest while accounting for trend,
-        seasonality, and noise.
+        Using dynamically fetched data and Prophet, the analysis models trend,
+        seasonality, and noise to generate short-term forecasts.
       </p>
     </div>
 
-    <!-- WHY I BUILT THIS -->
+    <!-- WHY -->
     <div>
       <h2 class="text-2xl font-bold text-[#003459] mb-4">Why I Built This Project</h2>
       <p class="text-gray-700">
-        Search trends reflect real-world demand and interest, but most analyses
-        stop at historical reporting. I built this project to practice predictive
-        analytics and demonstrate how forecasting can support market research,
-        content planning, and demand analysis.
+        Most trend analysis focuses on historical patterns only.
+        I built this project to practice predictive analytics using real,
+        continuously changing data and to demonstrate how forecasting
+        can support proactive business and content decisions.
       </p>
     </div>
 
-    <!-- BUSINESS / ANALYTICAL CONTEXT -->
+    <!-- BUSINESS CONTEXT -->
     <div>
-      <h2 class="text-2xl font-bold text-[#003459] mb-4">Business / Analytical Context</h2>
+      <h2 class="text-2xl font-bold text-[#003459] mb-4">Business Context</h2>
       <ul class="list-disc pl-6 text-gray-700 space-y-2">
-        <li>Search trends help identify rising and declining topics.</li>
-        <li>Forecasting enables early decision-making instead of reactive planning.</li>
-        <li>Demand prediction supports marketing and content strategies.</li>
+        <li>Search trends reflect market demand and interest shifts</li>
+        <li>Businesses need early signals, not delayed insights</li>
+        <li>Forecasting helps plan content, campaigns, and skill development</li>
       </ul>
     </div>
 
@@ -80,50 +79,51 @@
     <div>
       <h2 class="text-2xl font-bold text-[#003459] mb-4">Problem Statement</h2>
       <p class="text-gray-700">
-        Analyze Google search interest data and forecast future trends for key
-        technology topics, enabling data-driven decisions for marketing,
-        content strategy, and skill demand planning.
+        Analyze Google search interest data and forecast future trends
+        for key technology topics to support data-driven planning
+        in marketing, content strategy, and skill demand analysis.
       </p>
     </div>
 
-    <!-- DATA SOURCE -->
+    <!-- DATASET -->
     <div>
-      <h2 class="text-2xl font-bold text-[#003459] mb-4">Data Source & Dataset Overview</h2>
-      <p class="text-gray-700">
-        Data is dynamically fetched from Google Trends using the Pytrends API.
-        The dataset includes daily search interest values for selected keywords
-        over the most recent six-month period.
-      </p>
+      <h2 class="text-2xl font-bold text-[#003459] mb-4">Dataset Overview</h2>
+      <ul class="list-disc pl-6 text-gray-700 space-y-2">
+        <li>Source: Google Trends (via Pytrends API)</li>
+        <li>Granularity: Daily search interest</li>
+        <li>Time Range: Last 6 months (dynamic fetch)</li>
+        <li>Keywords: Data Analytics, Machine Learning, Artificial Intelligence</li>
+      </ul>
     </div>
 
     <!-- TOOLS -->
     <div>
-      <h2 class="text-2xl font-bold text-[#003459] mb-4">Tools & Technologies</h2>
+      <h2 class="text-2xl font-bold text-[#003459] mb-4">Tools Used</h2>
       <p class="text-gray-700">
-        Python · Pytrends · Prophet · Pandas · NumPy · Plotly · Streamlit
+        Python · Pytrends · Prophet · Pandas · NumPy · Matplotlib · Plotly · Streamlit
       </p>
     </div>
 
-    <!-- ANALYSIS & MODELING -->
+    <!-- ANALYSIS -->
     <div>
       <h2 class="text-2xl font-bold text-[#003459] mb-4">Analysis & Modeling Approach</h2>
       <ul class="list-disc pl-6 text-gray-700 space-y-2">
-        <li>Fetched Google Trends data dynamically using Pytrends</li>
-        <li>Cleaned and prepared time series data</li>
-        <li>Applied Prophet model to capture trend and seasonality</li>
-        <li>Evaluated forecast performance using RMSE</li>
-        <li>Deployed interactive results using Streamlit</li>
+        <li>Fetched Google Trends data dynamically</li>
+        <li>Prepared data in Prophet-compatible time series format</li>
+        <li>Modeled trend, seasonality, and noise</li>
+        <li>Evaluated forecast accuracy using RMSE</li>
+        <li>Visualized trends, forecasts, and components</li>
       </ul>
     </div>
 
-    <!-- KEY INSIGHTS -->
+    <!-- INSIGHTS -->
     <div>
       <h2 class="text-2xl font-bold text-[#003459] mb-4">Key Insights</h2>
       <ul class="list-disc pl-6 text-gray-700 space-y-2">
-        <li>Search interest varies significantly across keywords.</li>
-        <li>Artificial Intelligence shows stronger upward momentum.</li>
-        <li>Seasonal patterns are visible even in short-term data.</li>
-        <li>Forecasting highlights trend changes before they become obvious.</li>
+        <li>Search interest varies significantly across keywords</li>
+        <li>Artificial Intelligence shows stronger upward momentum</li>
+        <li>Seasonal patterns exist even in short-term data</li>
+        <li>Forecasting reveals trend shifts earlier than raw charts</li>
       </ul>
     </div>
 
@@ -131,13 +131,13 @@
     <div>
       <h2 class="text-2xl font-bold text-[#003459] mb-4">Business Impact</h2>
       <ul class="list-disc pl-6 text-gray-700 space-y-2">
-        <li>Supports content and campaign planning.</li>
-        <li>Helps identify emerging skills and topics early.</li>
-        <li>Demonstrates predictive analytics beyond static dashboards.</li>
+        <li>Supports content and marketing planning</li>
+        <li>Helps anticipate future skill demand</li>
+        <li>Enables proactive decision-making</li>
       </ul>
     </div>
 
-    <!-- PROJECT LINKS -->
+    <!-- LINKS -->
     <div>
       <h2 class="text-2xl font-bold text-[#003459] mb-4">Project Links</h2>
       <ul class="space-y-3 text-gray-700">
@@ -145,11 +145,11 @@
           🔗 <a href="https://keywords-trends-time-series-forecasting.streamlit.app/"
                target="_blank"
                class="text-[#007ea7] font-bold hover:underline">
-            Live Streamlit Application
+            Live Streamlit App
           </a>
         </li>
         <li>
-          🔗 <a href="https://github.com/priyankadatacodes/google-trends-time-series-forecasting"
+          🔗 <a href="https://github.com/priyankadatacodes"
                target="_blank"
                class="text-[#007ea7] font-bold hover:underline">
             GitHub Repository
