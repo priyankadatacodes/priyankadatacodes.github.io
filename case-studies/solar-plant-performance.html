@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Solar Plant Performance & Efficiency Analysis | Priyanka Lakra</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body style="
+  font-family: 'Poppins', Arial, sans-serif;
+  margin: 40px;
+  line-height: 1.7;
+  color: #00171f;
+">
+
+  <h2>Solar Plant Performance & Efficiency Analysis</h2>
+
+  <p>
+    <strong>Tools:</strong> Python, SQL (MySQL), Power BI
+  </p>
+
+  <p>
+    End-to-end analysis of solar power plant operational data to understand
+    energy generation, efficiency, system-level loss, and inverter performance.
+    This project focuses on turning raw sensor data into clear KPIs and insights
+    that support operational and management decisions.
+  </p>
+
+  <hr>
+
+  <h3>Why This Project</h3>
+  <p>
+    Solar plants generate large volumes of sensor data every day, but raw data
+    alone is difficult to interpret and not useful for quick decision-making.
+    Operations teams need simple metrics and trends to understand plant health,
+    efficiency, and performance issues.
+  </p>
+
+  <h3>Business Problem</h3>
+  <ul>
+    <li>How much energy is the plant generating?</li>
+    <li>How efficient is the system overall?</li>
+    <li>Where is energy being lost?</li>
+    <li>Is plant performance degrading over time?</li>
+    <li>Which inverters need attention?</li>
+  </ul>
+
+  <h3>Dataset Overview</h3>
+  <ul>
+    <li>Time-series solar generation and weather data</li>
+    <li>Metrics: DC power, AC power, daily energy yield</li>
+    <li>Weather data: irradiation, ambient temperature, module temperature</li>
+    <li>Inverter-level operational records</li>
+  </ul>
+
+  <h3>Data Preparation</h3>
+  <ul>
+    <li>Loaded generation and weather datasets using Python</li>
+    <li>Converted timestamps into datetime format</li>
+    <li>Removed duplicate and invalid records</li>
+    <li>Filtered non-operational data (DC power &gt; 0 and AC power &gt; 0)</li>
+    <li>Created derived columns required for analysis</li>
+  </ul>
+
+  <h3>Analysis Approach</h3>
+  <ul>
+    <li>Cleaned and prepared data using Pandas and NumPy</li>
+    <li>Stored cleaned data in MySQL for structured querying</li>
+    <li>Connected Power BI directly to the database</li>
+    <li>Created DAX measures for KPIs and trends</li>
+    <li>Built a single-page executive dashboard</li>
+  </ul>
+
+  <h3>Key KPIs Tracked</h3>
+  <ul>
+    <li>Total Energy Generated (kWh)</li>
+    <li>Average Panel Efficiency (%)</li>
+    <li>System Energy Utilization Loss (%)</li>
+    <li>Peak Daily Energy Output (kWh)</li>
+    <li>Average Daily Energy Yield</li>
+  </ul>
+
+  <p>
+    <em>
+      Note: System Energy Utilization Loss represents downtime, curtailment,
+      and non-generation periods, not inverter conversion loss.
+    </em>
+  </p>
+
+  <h3>Key Insights</h3>
+  <ul>
+    <li>A large portion of energy loss is driven by non-generating periods and downtime</li>
+    <li>Overall system efficiency remains relatively stable across time</li>
+    <li>Monthly AC power trends help identify early degradation patterns</li>
+    <li>Some inverters consistently perform below the plant average</li>
+  </ul>
+
+  <h3>Impact</h3>
+  <ul>
+    <li>Converted complex solar sensor data into clear KPIs that are easy to understand</li>
+    <li>Helped teams quickly see where and why energy loss was happening</li>
+    <li>Made it easier to identify underperforming inverters for timely maintenance</li>
+    <li>Enabled tracking of monthly performance trends to catch degradation early</li>
+    <li>Delivered a single-page Power BI dashboard for daily monitoring and reporting</li>
+  </ul>
+
+  <h3>Final Takeaway</h3>
+  <p>
+    This project shows how solar plant operational data can be transformed into
+    simple, actionable insights. Instead of working with raw data, teams can use
+    clear KPIs and dashboards to monitor performance and support better decisions.
+  </p>
+
+  <hr>
+
+  <p>
+    <a href="https://github.com/priyankadatacodes/priyankadatacodes.github.io/blob/main/priyanka-portfolio.html">← Back to Portfolio</a>
+  </p>
+
+</body>
+</html>
