@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>E-Commerce Funnel & Revenue Leakage Analysis | Priyanka Lakra</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Same stack as original portfolio -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body { font-family: 'Poppins', sans-serif; }
+  </style>
+</head>
+
+<body class="bg-white text-[#00171f]">
+
+<!-- ================= HEADER ================= -->
+<section class="py-20 px-6 bg-[#00171f] text-white">
+  <div class="max-w-5xl mx-auto">
+    <h1 class="text-4xl md:text-5xl font-bold mb-4">
+      E-Commerce <span class="text-[#00a8e8]">Funnel & Revenue Leakage</span> Analysis
+    </h1>
+    <p class="text-lg text-gray-300">
+      Order-level funnel performance, revenue realization, and delivery analytics using Python, SQL, and Tableau
+    </p>
+  </div>
+</section>
+
+<!-- ================= BACK TO PORTFOLIO ================= -->
+<section class="px-6 py-6 bg-white">
+  <div class="max-w-5xl mx-auto">
+    <a href="../priyanka-portfolio.html"
+       class="text-[#007ea7] font-semibold hover:underline">
+      ← Back to Portfolio
+    </a>
+  </div>
+</section>
+
+<!-- ================= CONTENT ================= -->
+<section class="py-20 px-6">
+  <div class="max-w-5xl mx-auto space-y-16">
+
+    <!-- EXECUTIVE SUMMARY -->
+    <div>
+      <h2 class="text-2xl font-bold text-[#003459] mb-4">Executive Summary</h2>
+      <p class="text-gray-700 leading-relaxed">
+        This project analyzes the end-to-end e-commerce order funnel using the Brazilian OLIST dataset,
+        focusing on order completion, revenue leakage, delivery timelines, and seller performance.
+        The analysis shows that the overall funnel is strong with minimal revenue loss due to cancellations,
+        while delivery delays vary across sellers and impact customer experience at scale.
+      </p>
+    </div>
+
+    <!-- WHY I BUILT THIS -->
+    <div>
+      <h2 class="text-2xl font-bold text-[#003459] mb-4">Why I Built This Project</h2>
+      <p class="text-gray-700">
+        Large e-commerce platforms handle thousands of orders daily across multiple sellers.
+        Even when conversion looks healthy, post-purchase issues such as delivery delays or cancellations
+        can affect customer trust and long-term business value. This project mirrors a real-world
+        operations analytics scenario.
+      </p>
+    </div>
+
+    <!-- BUSINESS CONTEXT -->
+    <div>
+      <h2 class="text-2xl font-bold text-[#003459] mb-4">Business Context</h2>
+      <ul class="list-disc pl-6 text-gray-700 space-y-2">
+        <li>Marketplace platforms depend on multiple sellers.</li>
+        <li>Delivery timelines directly affect customer experience.</li>
+        <li>Small inefficiencies can scale into large operational issues.</li>
+        <li>Business teams need visibility into post-purchase funnel health.</li>
+      </ul>
+    </div>
+
+    <!-- PROBLEM STATEMENT -->
+    <div>
+      <h2 class="text-2xl font-bold text-[#003459] mb-4">Problem Statement</h2>
+      <p class="text-gray-700">
+        Analyze order-level e-commerce data to evaluate funnel performance, quantify revenue loss due
+        to cancellations, assess delivery timelines, and identify seller-level operational issues
+        impacting customer experience and efficiency.
+      </p>
+    </div>
+
+    <!-- DATASET -->
+    <div>
+      <h2 class="text-2xl font-bold text-[#003459] mb-4">Dataset Overview</h2>
+      <p class="text-gray-700">
+        Brazilian OLIST E-commerce Dataset (Order-level data including orders, order items,
+        products, and delivery timestamps). Only relevant tables were used to keep analysis focused
+        on business outcomes.
+      </p>
+    </div>
+
+    <!-- TOOLS -->
+    <div>
+      <h2 class="text-2xl font-bold text-[#003459] mb-4">Tools Used</h2>
+      <p class="text-gray-700">
+        Python · MySQL · SQL · Tableau
+      </p>
+    </div>
+
+    <!-- ANALYSIS APPROACH -->
+    <div>
+      <h2 class="text-2xl font-bold text-[#003459] mb-4">Analysis Approach</h2>
+      <ul class="list-disc pl-6 text-gray-700 space-y-2">
+        <li>Cleaned and prepared raw CSV data using Python</li>
+        <li>Loaded cleaned data into MySQL</li>
+        <li>Analyzed funnel performance and cancellations using SQL</li>
+        <li>Evaluated delivery timelines and seller-level performance</li>
+        <li>Built a single-page Tableau dashboard for business reporting</li>
+      </ul>
+    </div>
+
+    <!-- KPIs -->
+    <div>
+      <h2 class="text-2xl font-bold text-[#003459] mb-4">Key KPIs Tracked</h2>
+      <ul class="list-disc pl-6 text-gray-700 space-y-2">
+        <li>Total Orders</li>
+        <li>Funnel Conversion Rate</li>
+        <li>Cancellation Rate</li>
+        <li>Total Revenue</li>
+        <li>Revenue Loss Percentage</li>
+        <li>Average Delivery Time (Days)</li>
+      </ul>
+    </div>
+
+    <!-- KEY INSIGHTS -->
+    <div>
+      <h2 class="text-2xl font-bold text-[#003459] mb-4">Key Insights</h2>
+      <ul class="list-disc pl-6 text-gray-700 space-y-2">
+        <li>Most orders are delivered successfully, indicating a healthy funnel.</li>
+        <li>Revenue loss due to cancellations is minimal.</li>
+        <li>Delivery delays are not strongly linked to cancellations.</li>
+        <li>A small group of sellers consistently delivers slower than average.</li>
+        <li>Revenue is concentrated in a limited number of product categories.</li>
+      </ul>
+    </div>
+
+    <!-- BUSINESS IMPACT -->
+    <div>
+      <h2 class="text-2xl font-bold text-[#003459] mb-4">Business Impact</h2>
+      <ul class="list-disc pl-6 text-gray-700 space-y-2">
+        <li>Confirms that revenue leakage is not a major business risk.</li>
+        <li>Highlights delivery performance as the key improvement area.</li>
+        <li>Supports seller-level monitoring to improve customer experience.</li>
+      </ul>
+    </div>
+
+    <!-- PROJECT LINKS -->
+    <div>
+      <h2 class="text-2xl font-bold text-[#003459] mb-4">Project Links</h2>
+      <ul class="space-y-3 text-gray-700">
+        <li>
+          🔗 <a href="https://github.com/priyankadatacodes/ecommerce-funnel-revenue-analysis"
+               target="_blank"
+               class="text-[#007ea7] font-bold hover:underline">
+            GitHub Repository
+          </a>
+        </li>
+        <li>
+          🔗 <a href="https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce"
+               target="_blank"
+               class="text-[#007ea7] font-bold hover:underline">
+            Dataset (Kaggle – OLIST)
+          </a>
+        </li>
+        <li>
+          🔗 <a href="https://youtu.be/1M23feu2Fqs"
+               target="_blank"
+               class="text-[#007ea7] font-bold hover:underline">
+            Dashboard Walkthrough (YouTube)
+          </a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="py-8 bg-[#00171f] text-center text-gray-400 text-sm">
+  © 2026 Priyanka Lakra · Data Analytics Portfolio
+</footer>
+
+</body>
+</html>
